@@ -11,14 +11,12 @@
     ];
 
   nix.settings.experimental-features = ["nix-command" "flakes" ];
-
-  virtualisation.virtualbox.guest.enable = true;
-  virtualisation.virtualbox.guest.x11 = true;
-
+  
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.excludePackages = [ pkgs.xterm ];
 
   # Enable flatpak
   services.flatpak.enable = true;
@@ -34,7 +32,14 @@
     micro
     nodejs
 
-    linuxKernel.packages.linux_6_1.virtualboxGuestAdditions
+  ];
+
+  environment.gnome.excludePackages = with pkgs; [
+  	gnome-tour
+  	gnome-console
+  	gnome.cheese
+  	gnome.gnome-music
+  	epiphany
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

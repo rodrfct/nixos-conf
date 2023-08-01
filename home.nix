@@ -76,6 +76,10 @@
       fi
     '';
 
+    sessionVariables = {
+    	EDITOR = "micro";
+    };
+
     # set some aliases, feel free to add more or remove some
     shellAliases = {
       k = "kubectl";
