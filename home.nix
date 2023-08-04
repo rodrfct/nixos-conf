@@ -25,13 +25,21 @@
     enable = true;
     userName = "rodrfct";
     userEmail = "rodrigoca.fct@gmail.com";
+
+    extraConfig = {
+    	init = {
+    		defaultBranch = "master";
+    	};
+    };
   };
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     btop
+    fira-code
     firefox-devedition-bin
     gdu
+    gnome.gnome-calendar
     neofetch
     vscodium-fhs
     yq-go
