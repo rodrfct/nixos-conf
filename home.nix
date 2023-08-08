@@ -96,6 +96,23 @@
     };
   };
 
+  xdg.desktopEntries = {
+  	#firefox-devedition.name = "Firefox Developer Edition";
+
+  	btop = {
+  		name = "btop";
+  		noDisplay = true;
+  	};
+  	micro = {
+  		name = "micro";
+  		noDisplay = true;
+  	};
+  	fish = {
+  		name = "fish";
+  		noDisplay = true;
+  	};
+  };
+
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
