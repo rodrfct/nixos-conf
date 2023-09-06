@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -60,6 +60,17 @@
   	  "workbench.iconTheme" = "material-icon-theme";
   	  "workbench.startupEditor" = "none";
   	};
+
+    extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux; [
+      open-vsx.vue.volar
+      open-vsx.pkief.material-icon-theme
+      open-vsx.sndst00m.vscode-native-svg-preview
+      open-vsx.jnoortheen.nix-ide
+      #open-vsx.rust-lang.rust-analyzer
+      #vscode-marketplace.vue.vscode-typescript-plugin
+      open-vsx.antfu.theme-vitesse
+      open-vsx.teabyii.ayu
+    ];
   };
 
   xdg.desktopEntries = {
