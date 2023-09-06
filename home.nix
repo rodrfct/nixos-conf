@@ -41,9 +41,22 @@
     gdu
     gnome.gnome-calendar
     neofetch
-    vscodium-fhs
     yq-go
   ];
+
+  programs.vscode = {
+  	enable = true;
+  	package = pkgs.vscodium;
+
+  	userSettings = {
+  	  "editor.fontFamily" = "'Fira Code', 'monospace', monospace";
+  	  "editor.fontLigatures" = true;
+  	  "window.menuBarVisibility" = "toggle";
+  	  "workbench.colorTheme" = "Vitesse Dark";
+  	  "workbench.iconTheme" = "material-icon-theme";
+  	  "workbench.startupEditor" = "none";
+  	};
+  };
 
   programs.fish = {
   	enable = true;
