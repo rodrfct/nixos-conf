@@ -3,6 +3,7 @@
 {
   imports = [
     ./shells.nix
+    ./develop.nix
   ];
 
   home.username = "rodrigo";
@@ -23,20 +24,6 @@
   #     xxx
   # '';
 
-
-  # basic configuration of git
-  programs.git = {
-    enable = true;
-    userName = "rodrfct";
-    userEmail = "rodrigoca.fct@gmail.com";
-
-    extraConfig = {
-    	init = {
-    		defaultBranch = "master";
-    	};
-    };
-  };
-
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     btop
@@ -47,31 +34,6 @@
     neofetch
     yq-go
   ];
-
-  programs.vscode = {
-  	enable = true;
-  	package = pkgs.vscodium;
-
-  	userSettings = {
-  	  "editor.fontFamily" = "'Fira Code', 'monospace', monospace";
-  	  "editor.fontLigatures" = true;
-  	  "window.menuBarVisibility" = "toggle";
-  	  "workbench.colorTheme" = "Vitesse Dark";
-  	  "workbench.iconTheme" = "material-icon-theme";
-  	  "workbench.startupEditor" = "none";
-  	};
-
-    extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux; [
-      open-vsx.vue.volar
-      open-vsx.pkief.material-icon-theme
-      open-vsx.sndst00m.vscode-native-svg-preview
-      open-vsx.jnoortheen.nix-ide
-      #open-vsx.rust-lang.rust-analyzer
-      #vscode-marketplace.vue.vscode-typescript-plugin
-      open-vsx.antfu.theme-vitesse
-      open-vsx.teabyii.ayu
-    ];
-  };
 
   xdg.desktopEntries = {
   	#firefox-devedition.name = "Firefox Developer Edition";

@@ -34,7 +34,6 @@
           
               users.rodrigo = import ./home-manager/home.nix;
             };
-          
           }
         ];
 
