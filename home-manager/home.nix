@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./shells.nix
+  ];
+
   home.username = "rodrigo";
   home.homeDirectory = "/home/rodrigo";
 
@@ -56,57 +60,6 @@
   	  "workbench.iconTheme" = "material-icon-theme";
   	  "workbench.startupEditor" = "none";
   	};
-  };
-
-  programs.fish = {
-  	enable = true;
-  	interactiveShellInit = ''
-  	set fish_greeting ""
-  	'';
-  };
-
-  # starship - an customizable prompt for any shell
-  programs.starship = {
-    enable = true;
-    enableFishIntegration = true;
-    enableBashIntegration = false;
-    # custom settings
-    settings = {
-      format = ''
-      [┌ ](bold green)$all
-      [└─> ](bold green)
-      '';
-      
-      line_break.disabled = true;
-      character = {
-      	success_symbol = "";
-      };
-    };
-  };
-
-
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
-
-    initExtra = ''
-      if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
-      then
-      	shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
-      	exec fish $LOGIN_OPTION
-      fi
-    '';
-
-    sessionVariables = {
-    	EDITOR = "micro";
-    };
-
-    # set some aliases, feel free to add more or remove some
-    shellAliases = {
-      k = "kubectl";
-      urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
-      urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
-    };
   };
 
   xdg.desktopEntries = {

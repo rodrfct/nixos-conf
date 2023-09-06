@@ -10,7 +10,12 @@
       ./hardware-configuration.nix
     ];
 
-  nix.settings.experimental-features = ["nix-command" "flakes" ];
+  nix = {
+    settings = {
+      experimental-features = ["nix-command" "flakes" ];
+      auto-optimise-store = true;
+    };
+  };
   
 
   # Enable the GNOME Desktop Environment.
