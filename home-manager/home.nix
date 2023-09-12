@@ -32,6 +32,7 @@
     gdu
     gnome.gnome-calendar
     neofetch
+    ranger
     yq-go
   ];
 

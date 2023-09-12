@@ -28,15 +28,18 @@
   	};
 
     extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux; [
-      open-vsx.vue.volar
-      open-vsx.pkief.material-icon-theme
-      open-vsx.sndst00m.vscode-native-svg-preview
-      open-vsx.shd101wyy.markdown-preview-enhanced
+      # Language support
       open-vsx.jnoortheen.nix-ide
-      #open-vsx.rust-lang.rust-analyzer
-      #vscode-marketplace.vue.vscode-typescript-plugin
+      open-vsx.vue.volar
+      open-vsx.zixuanchen.vitest-explorer
+      # Utilities
+      open-vsx.shd101wyy.markdown-preview-enhanced
+      open-vsx.sndst00m.vscode-native-svg-preview
+      # Color themes
       open-vsx.antfu.theme-vitesse
       open-vsx.teabyii.ayu
+      # Icon themes
+      open-vsx.pkief.material-icon-theme
     ];
   };
   
