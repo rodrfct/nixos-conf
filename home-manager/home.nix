@@ -32,6 +32,7 @@
     gdu
     gnome.gnome-calendar
     neofetch
+    nodePackages_latest.nodejs
     ranger
     yq-go
   ];
@@ -46,6 +47,10 @@
   	micro = {
   		name = "micro";
   		noDisplay = true;
+  	};
+  	ranger = {
+  	  	name = "ranger";
+  	  	noDisplay = true;
   	};
   	fish = {
   		name = "fish";
