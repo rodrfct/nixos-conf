@@ -27,18 +27,13 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     btop
-    fira-code
-    firefox-devedition-bin
     gdu
     gnome.gnome-calendar
     neofetch
-    nodePackages_latest.nodejs
     ranger
-    yq-go
   ];
 
   xdg.desktopEntries = {
-  	#firefox-devedition.name = "Firefox Developer Edition";
 
   	btop = {
   		name = "btop";

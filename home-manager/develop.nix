@@ -1,6 +1,16 @@
 { config, pkgs, inputs, ... }:
 
 {
+
+  home.packages = with pkgs; [
+	bun
+    fira-code
+	fira-code-nerdfont
+    firefox-devedition-bin
+    nodePackages_latest.nodejs
+    yq-go
+  ];
+
   # basic configuration of git
   programs.git = {
     enable = true;

@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./gnome.nix
     ];
 
   nix = {
@@ -16,13 +17,8 @@
       auto-optimise-store = true;
     };
   };
+
   
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.excludePackages = [ pkgs.xterm ];
-
   # Enable flatpak
   services.flatpak.enable = true;
 
@@ -31,21 +27,9 @@
   environment.systemPackages = with pkgs; [
     wget
     git
-    gnome.gnome-software
-    gnome.gnome-terminal
-    gnome.gnome-tweaks
     micro
-    nodejs
-
   ];
 
-  environment.gnome.excludePackages = with pkgs; [
-  	gnome-tour
-  	gnome-console
-  	gnome.cheese
-  	gnome.gnome-music
-  	epiphany
-  ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rodrigo = {
