@@ -1,11 +1,13 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
 
   home.packages = with pkgs; [
-	bun
+	  bun
+    nil
+    nixpkgs-fmt
     fira-code
-	fira-code-nerdfont
+	  fira-code-nerdfont
     firefox-devedition-bin
     nodePackages_latest.nodejs
     yq-go
@@ -35,6 +37,14 @@
   	  "workbench.colorTheme" = "Vitesse Dark";
   	  "workbench.iconTheme" = "material-icon-theme";
   	  "workbench.startupEditor" = "none";
+      "terminal.integrated.customGlyphs" = false;
+      "terminal.integrated.fontFamily" = "'Fira Code', 'Fira Code Nerd Font', 'Fira Code NF', 'Hack NF', 'Hack Nerd Font', monospace";
+
+      # Nix LSP
+      "nix.enableLanguageServer" = true;
+      #"nix.serverPath" = "rnix-lsp";
+      "nix.serverPath" = "nil";
+      #"nix.serverPath": "nixd"
   	};
 
     extensions = with inputs.nix-vscode-extensions.extensions.x86_64-linux; [
