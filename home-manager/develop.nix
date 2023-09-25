@@ -37,8 +37,8 @@
   	  "workbench.colorTheme" = "Vitesse Dark";
   	  "workbench.iconTheme" = "material-icon-theme";
   	  "workbench.startupEditor" = "none";
-      "terminal.integrated.customGlyphs" = false;
-      "terminal.integrated.fontFamily" = "'Fira Code', 'Fira Code Nerd Font', 'Fira Code NF', 'Hack NF', 'Hack Nerd Font', monospace";
+      #"terminal.integrated.customGlyphs" = false;
+      #"terminal.integrated.fontFamily" = "'Fira Code', 'Fira Code Nerd Font', 'Fira Code NF', 'Hack NF', 'Hack Nerd Font', monospace";
 
       # Nix LSP
       "nix.enableLanguageServer" = true;
@@ -61,6 +61,29 @@
       # Icon themes
       open-vsx.pkief.material-icon-theme
     ];
+
+    languageSnippets = {
+      vue = {
+        "Script setup with Typescript" = {
+          "prefix" = "script:ts";
+          "body" = [
+            "<script setup lang=\"ts\">"
+            "$0"
+            "</script>"
+          ];
+        };
+
+        "Template" = {
+          "prefix" = "template";
+          "body" = [
+            "<template>"
+            "\t$0"
+            "</template>"
+          ];
+        };
+      };
+
+    };
   };
   
 }
