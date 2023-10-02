@@ -6,8 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    [
+      ./hardware-configuration.nix # Include the results of the hardware scan.
       ./gnome.nix
     ];
 
@@ -15,6 +15,12 @@
     settings = {
       experimental-features = ["nix-command" "flakes" ];
       auto-optimise-store = true;
+    };
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 1w";
     };
   };
 
@@ -97,9 +103,6 @@
     LC_TELEPHONE = "es_ES.UTF-8";
     LC_TIME = "es_ES.UTF-8";
   };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
   
   # Configure keymap in X11
   services.xserver = {

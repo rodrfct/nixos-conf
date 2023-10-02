@@ -30,12 +30,15 @@
     gdu
     gnome.gnome-calendar
     neofetch
-    ranger
+    lf # Yet to learn
   ];
 
   xdg.desktopEntries = {
+  	# firefox-developer-edition = lib.mkOverride {
+    #   name = "Firefox Developer Edition";
+    # };
 
-  	btop = {
+    btop = {
   		name = "btop";
   		noDisplay = true;
   	};

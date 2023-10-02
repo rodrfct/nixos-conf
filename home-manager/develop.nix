@@ -4,7 +4,8 @@
 
   home.packages = with pkgs; [
 	  bun
-    nil
+    neovim # Yet to learn
+    nil # Nix LSP
     nixpkgs-fmt
     fira-code
 	  fira-code-nerdfont
@@ -37,8 +38,6 @@
   	  "workbench.colorTheme" = "Vitesse Dark";
   	  "workbench.iconTheme" = "material-icon-theme";
   	  "workbench.startupEditor" = "none";
-      #"terminal.integrated.customGlyphs" = false;
-      #"terminal.integrated.fontFamily" = "'Fira Code', 'Fira Code Nerd Font', 'Fira Code NF', 'Hack NF', 'Hack Nerd Font', monospace";
 
       # Nix LSP
       "nix.enableLanguageServer" = true;
@@ -51,7 +50,6 @@
       # Language support
       open-vsx.jnoortheen.nix-ide
       open-vsx.vue.volar
-      open-vsx.zixuanchen.vitest-explorer
       # Utilities
       open-vsx.shd101wyy.markdown-preview-enhanced
       open-vsx.sndst00m.vscode-native-svg-preview
