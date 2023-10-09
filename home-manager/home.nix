@@ -3,7 +3,7 @@
 {
   imports = [
     ./shells.nix
-    ./develop.nix
+    ./develop/develop.nix
   ];
 
   home.username = "rodrigo";
@@ -46,8 +46,8 @@
   		name = "micro";
   		noDisplay = true;
   	};
-  	ranger = {
-  	  	name = "ranger";
+  	lf = {
+  	  	name = "lf";
   	  	noDisplay = true;
   	};
   	fish = {

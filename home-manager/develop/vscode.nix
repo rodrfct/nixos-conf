@@ -1,31 +1,10 @@
 { pkgs, inputs, ... }:
 
 {
-
   home.packages = with pkgs; [
-	  bun
-    neovim # Yet to learn
     nil # Nix LSP
     nixpkgs-fmt
-    fira-code
-	  fira-code-nerdfont
-    firefox-devedition-bin
-    nodePackages_latest.nodejs
-    yq-go
   ];
-
-  # basic configuration of git
-  programs.git = {
-    enable = true;
-    userName = "rodrfct";
-    userEmail = "rodrigoca.fct@gmail.com";
-
-    extraConfig = {
-    	init = {
-    		defaultBranch = "master";
-    	};
-    };
-  };
 
   programs.vscode = {
   	enable = true;
@@ -38,6 +17,8 @@
   	  "workbench.colorTheme" = "Vitesse Dark";
   	  "workbench.iconTheme" = "material-icon-theme";
   	  "workbench.startupEditor" = "none";
+  	  # Extensions
+  	  "markdown-preview-enhanced.previewTheme" = "github-dark.css";
 
       # Nix LSP
       "nix.enableLanguageServer" = true;
@@ -83,5 +64,4 @@
 
     };
   };
-  
 }

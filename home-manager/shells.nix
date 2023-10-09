@@ -13,6 +13,7 @@
     enable = true;
     enableFishIntegration = true;
     enableBashIntegration = false;
+    
     # custom settings
     settings = {
       format = ''
@@ -20,6 +21,7 @@
       [└─> ](bold green)
       '';
       
+      command_timeout = 1000;
       line_break.disabled = true;
       character = {
       	success_symbol = "";
