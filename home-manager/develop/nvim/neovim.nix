@@ -15,7 +15,6 @@
       typescript
       nodePackages_latest.typescript-language-server
       vscode-langservers-extracted
-      nodePackages_latest.volar
     ];
 
     plugins = with pkgs.vimPlugins; [
@@ -89,11 +88,8 @@
         }
         '';
       }
+      nvim-treesitter-parsers.vue
     ];
-
-    extraConfig = ''
-    set relativenumber
-    '';
 
     extraLuaConfig = ''
 

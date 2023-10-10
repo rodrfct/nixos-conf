@@ -74,8 +74,8 @@ require('lspconfig').tsserver.setup {
     capabilities = capabilities,
 }
 
--- vue-language-server is missing from nixpkgs, volar is the correct package
-require('lspconfig').volar.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-}
+-- vue-language-server is missing from nixpkgs
+-- require('lspconfig').volar.setup {
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+-- }
