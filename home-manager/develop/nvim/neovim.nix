@@ -15,6 +15,7 @@
       typescript
       nodePackages_latest.typescript-language-server
       vscode-langservers-extracted
+      nodePackages_latest.volar
     ];
 
     plugins = with pkgs.vimPlugins; [
@@ -98,8 +99,7 @@
 
     vim.o.clipboard = 'unnamedplus'
 
-    vim.o.number = true
-    -- vim.o.relativenumber = true
+    vim.o.relativenumber = true
 
     vim.o.signcolumn = 'yes'
 
