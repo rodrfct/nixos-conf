@@ -9,6 +9,7 @@
     vimdiffAlias = true;
 
     extraPackages = with pkgs; [
+      xclip # Clipboard support
       # LSP
       luajitPackages.lua-lsp
       rnix-lsp
@@ -27,6 +28,14 @@
       {
         plugin = nord-nvim;
         config = "colorscheme nord";
+      }
+      {
+        plugin = neovim-ayu;
+        type = "lua";
+        config = ''
+        require('ayu').setup({})
+        -- require('ayu').colorscheme()
+        '';
       }
       {
         plugin = lualine-nvim;
@@ -125,7 +134,6 @@
         }
         '';
       }
-      nvim-treesitter-parsers.vue
     ];
 
     extraLuaConfig = ''
