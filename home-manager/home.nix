@@ -29,7 +29,6 @@
     btop
     gdu
     gnome.gnome-calendar
-    neofetch
     lf # Yet to learn
   ];
 

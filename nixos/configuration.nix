@@ -33,7 +33,10 @@
   environment.systemPackages = with pkgs; [
     wget
     git
+    curl
     micro
+    neofetch
+    tree
   ];
 
 

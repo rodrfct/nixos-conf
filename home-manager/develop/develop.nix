@@ -8,12 +8,14 @@
   ];
 
   home.packages = with pkgs; [
-	  bun
+    bun
     fira-code
-	  fira-code-nerdfont
+    fira-code-nerdfont
     firefox-devedition-bin
     nodePackages_latest.nodejs
     onefetch
+    sqlite
+    sqlitebrowser
     yq-go
   ];
 
