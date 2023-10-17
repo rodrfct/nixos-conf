@@ -32,6 +32,10 @@
     lf # Yet to learn
   ];
 
+  home.sessionVariables = {
+    EDITOR = "vim";
+  };
+
   xdg.desktopEntries = {
   	# firefox-developer-edition = lib.mkOverride {
     #   name = "Firefox Developer Edition";
