@@ -9,7 +9,15 @@
     vimdiffAlias = true;
 
     extraPackages = with pkgs; [
-      xclip # Clipboard support
+      # Clipboard support
+      xclip 
+      wl-clipboard
+      # Enhance telescope
+      ripgrep # Mandatory
+      fd
+      chafa
+      imagemagick
+      poppler_utils
       # LSP
       luajitPackages.lua-lsp
       rnix-lsp
@@ -96,17 +104,29 @@
 
       vim-nix
       neodev-nvim
+
+      popup-nvim     
+      telescope-media-files-nvim
       {
         plugin = telescope-nvim;
         type = "lua";
         config = ''
-        require('telescope').setup()
+        require('telescope').load_extension('media_files')
+        require('telescope').setup({
+          extensions = {
+            media_files = {
+              filetypes = {"png", "jpg", "jpeg", "svg", "webp", "ico"},
+            }
+
+          }
+        })
 
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
         vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+        vim.keymap.set('n', '<leader>fi', ':Telescope media_files<CR>', {})
         '';
       }
 
@@ -114,6 +134,7 @@
         plugin = (nvim-treesitter.withPlugins (p: [
           p.tree-sitter-nix
           p.tree-sitter-lua
+          p.tree-sitter-markdown
           p.tree-sitter-css
           p.tree-sitter-html
           p.tree-sitter-javascript
