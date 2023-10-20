@@ -66,6 +66,7 @@
         type = "lua";
         config = builtins.readFile ./plugin/cmp.lua;
       }
+      cmp_luasnip
       cmp-nvim-lsp
 
       {
@@ -97,6 +98,9 @@
         vim.cmd('autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()')
         '';
       }
+      
+      luasnip
+      friendly-snippets
 
       vim-nix
       neodev-nvim
@@ -177,8 +181,8 @@
       vim.keymap.set('n', keys, func, { buffer = bufnr })
     end
   
-    bufmap('<leader>tn', ':tabn<CR>')
-    bufmap('<leader>tp', ':tabp<CR>')
+    bufmap('<leader>fn', ':tabn<CR>')
+    bufmap('<leader>fp', ':tabp<CR>')
 
     '';
   };
