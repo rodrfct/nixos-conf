@@ -9,6 +9,7 @@
     [
       ./hardware-configuration.nix # Include the results of the hardware scan.
       ./gnome.nix
+      ./docker.nix
     ];
 
   nix = {
