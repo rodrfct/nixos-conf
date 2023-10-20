@@ -8,6 +8,7 @@
   ];
 
   home.packages = with pkgs; [
+    brave # Test for chromium
     bun
     fira-code
     fira-code-nerdfont
