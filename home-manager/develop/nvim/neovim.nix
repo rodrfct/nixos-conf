@@ -182,6 +182,9 @@
     bufmap('<leader>tn', ':tabn<CR>')
     bufmap('<leader>tp', ':tabp<CR>')
 
+    -- This is so deep into my musle memory I can't get rid of it just yet
+    bufmap('<C-s>', ':w')
+
     '';
   };
 }
