@@ -129,16 +129,16 @@
       }
 
       {
-        plugin = (nvim-treesitter.withPlugins (p: [
-          p.tree-sitter-nix
-          p.tree-sitter-lua
-          p.tree-sitter-markdown
-          p.tree-sitter-css
-          p.tree-sitter-html
-          p.tree-sitter-javascript
-          p.tree-sitter-typescript
-          p.tree-sitter-json
-          p.tree-sitter-vue
+        plugin = (nvim-treesitter.withPlugins (p: with p; [
+          tree-sitter-nix
+          tree-sitter-lua
+          tree-sitter-markdown
+          tree-sitter-css
+          tree-sitter-html
+          tree-sitter-javascript
+          tree-sitter-typescript
+          tree-sitter-json
+          tree-sitter-vue
         ]));
         type = "lua";
         config = ''
@@ -175,6 +175,9 @@
 
     vim.o.mouse = 'a'
 
+    nnoremap('<C-d>', '<C-d>zz')
+    nnoremap('<C-u>', '<C-u>zz')
+
     local bufmap = function(keys, func)
       vim.keymap.set('n', keys, func, { buffer = bufnr })
     end
@@ -183,7 +186,8 @@
     bufmap('<leader>tp', ':tabp<CR>')
 
     -- This is so deep into my musle memory I can't get rid of it just yet
-    bufmap('<C-s>', ':w')
+    bufmap('<C-s>', ':w<CR>')
+    inoremap(<C-s> <Esc>:w<CR>a)
 
     '';
   };
