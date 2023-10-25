@@ -175,19 +175,23 @@
 
     vim.o.mouse = 'a'
 
-    nnoremap('<C-d>', '<C-d>zz')
-    nnoremap('<C-u>', '<C-u>zz')
-
     local bufmap = function(keys, func)
       vim.keymap.set('n', keys, func, { buffer = bufnr })
+    end
+
+    local ibufmap = function(keys, func)
+      vim.keymap.set('i', keys, func, { buffer = bufnr })
     end
   
     bufmap('<leader>tn', ':tabn<CR>')
     bufmap('<leader>tp', ':tabp<CR>')
 
+    ibufmap('<C-d>', '<C-d>zz')
+    ibufmap('<C-u>', '<C-u>zz')
+
     -- This is so deep into my musle memory I can't get rid of it just yet
     bufmap('<C-s>', ':w<CR>')
-    inoremap(<C-s> <Esc>:w<CR>a)
+    ibufmap('<C-s>', '<Esc>:w<CR>a')
 
     '';
   };
