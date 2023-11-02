@@ -1,0 +1,83 @@
+/* Terminal Prompt */
+code.zsh span[id^="cb"]::before {
+    content: '$ ';
+  }
+  
+  /* Bash */
+  code.bash .bu {
+    color: #4e6392;
+  }
+  
+  code.bash .cf {
+    color: #7ac5e4;
+  }
+  
+  code.bash .st {
+    color: #b3d584;
+  }
+  
+  code.bash .va {
+    color: #d1a5fe;
+  }
+  
+  /* Rust */
+  code.rust .kw {
+    color: #ff7733; /*#b294bb;*/
+  }
+  
+  code.rust .pp,
+  .dt {
+    color: #de935f;
+  }
+  
+  code.rust .st {
+    color: #a1a85f;
+  }
+  
+  
+  /* HTML */
+  code.html .kw {
+    color: #176288;
+  }
+  
+  code.html .er {
+    color: #975caf;
+  }
+  
+  code.html .st {
+    color: #465177;
+  }
+  
+  /* YAML */
+  code.yaml .kw {
+    color: #cc025b;
+  }
+  
+  code.yaml .ch {
+    color: #6b5793;
+  }
+  
+  code.yaml .fu {
+    color: #52adcc;
+  }
+  
+  /* Javascript */
+  code.javascript .kw {
+    color: #3e6688;
+  }
+  
+  code.javascript .st {
+    color: #9f725f;
+  }
+  
+  code.javascript .cf, code.html .cf {
+    color: #aa75a6;
+  }
+  
+  code.javascript .fu, code.html .fu {
+    color: #afaf89;
+  }
+  
+  code.javascript .bu, code.html .bu {
+    color: #88bfdc;
+  }

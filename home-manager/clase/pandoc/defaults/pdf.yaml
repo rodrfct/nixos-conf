@@ -1,0 +1,10 @@
+pdf-engine: weasyprint
+css: ${USERDATA}/css/pdf.css
+reference-location: section
+from: markdown-native_divs
+table-of-contents: true
+strip-comments: true
+
+
+variables:
+    toc-title: Índice

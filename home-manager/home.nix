@@ -4,6 +4,7 @@
   imports = [
     ./shells.nix
     ./develop/develop.nix
+    ./clase/default.nix
   ];
 
   home.username = "rodrigo";
@@ -33,7 +34,7 @@
   ];
 
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "micro"; # Bc running vim inside vim gets trippy
   };
 
   xdg.desktopEntries = {
@@ -67,7 +68,7 @@
   # You can update home Manager without changing this value. See
   # the home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "23.05";
+  home.stateVersion = "23.11";
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;

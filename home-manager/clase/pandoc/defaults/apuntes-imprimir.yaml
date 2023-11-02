@@ -1,0 +1,16 @@
+pdf-engine: weasyprint
+css:
+   - css/variables-imprimir.css
+   - css/apuntes-imprimir.css
+   - css/syntax_highlight.css
+reference-location: section
+template: apuntes.html
+table-of-contents: true
+html-math-method:
+  method: mathml
+from: markdown-native_divs
+
+strip-comments: true
+
+variables:
+    toc-title: Índice
