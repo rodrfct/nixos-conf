@@ -113,7 +113,7 @@
         require('telescope').setup({
           extensions = {
             media_files = {
-              filetypes = {"png", "jpg", "jpeg", "svg", "webp", "ico"},
+              filetypes = {"png", "jpg", "jpeg", "svg", "webp", "ico", "pdf"},
             }
 
           }
@@ -165,6 +165,7 @@
     vim.o.clipboard = 'unnamedplus'
 
     vim.o.relativenumber = true
+    vim.o.number = true
 
     vim.o.signcolumn = 'yes'
 
@@ -192,12 +193,15 @@
     ibufmap('<C-u>', '<C-u>zz')
 
     ibufmap('<C-Right>', '<Esc>ea')
-    ibufmap('<C-BS>', '<Esc>dba')
 
     -- This is so deep into my musle memory I can't get rid of it just yet
     bufmap('<C-s>', ':w<CR>')
     ibufmap('<C-s>', '<Esc>:w<CR>a')
 
+    '';
+
+    extraConfig = ''
+    set guicursor+=a:blinkon1
     '';
   };
 }
