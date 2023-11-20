@@ -12,7 +12,7 @@
     bun
     fira-code
     fira-code-nerdfont
-    firefox-devedition-bin
+    firefox-devedition
     nodePackages_latest.nodejs
     onefetch
     sqlite
