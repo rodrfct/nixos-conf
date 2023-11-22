@@ -8,6 +8,7 @@
   home.packages = [
     pkgs.netbeans
     pkgs.gradle
+    (import ./patch_gradle_libnativeplatform.nix {inherit pkgs;})
   ];
 
   programs.neovim = {
