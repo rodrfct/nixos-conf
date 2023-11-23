@@ -189,8 +189,8 @@
     bufmap('<leader>tn', ':tabn<CR>')
     bufmap('<leader>tp', ':tabp<CR>')
 
-    ibufmap('<C-d>', '<C-d>zz')
-    ibufmap('<C-u>', '<C-u>zz')
+    bufmap('<C-d>', '<C-d>zz')
+    bufmap('<C-u>', '<C-u>zz')
 
     ibufmap('<C-Right>', '<Esc>ea')
 
