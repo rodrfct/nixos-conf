@@ -4,7 +4,7 @@
   imports = [
     ./pandoc/default.nix
     ./LMGSI.nix
-    ./PROG.nix
+    ./PROG/PROG.nix
   ];
 
   home.packages = with pkgs; [
