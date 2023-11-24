@@ -76,6 +76,11 @@
         config = "require('nvim-autopairs').setup()";
       }
       {
+        plugin = indent-blankline-nvim;
+        type = "lua";
+        config = "require('ibl').setup {scope = {enabled = true},}";
+      }
+      {
         plugin = toggleterm-nvim;
         type = "lua";
         config = ''
