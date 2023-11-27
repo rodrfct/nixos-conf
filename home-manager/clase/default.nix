@@ -9,5 +9,6 @@
 
   home.packages = with pkgs; [
     gnome.gnome-screenshot
+    zip
   ];
 }
