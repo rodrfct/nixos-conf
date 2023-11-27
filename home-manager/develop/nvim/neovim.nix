@@ -9,6 +9,7 @@
     vimdiffAlias = true;
 
     extraPackages = with pkgs; [
+      nodePackages_latest.prettier
       # Clipboard support
       xclip 
       wl-clipboard
@@ -80,6 +81,7 @@
         type = "lua";
         config = "require('ibl').setup {scope = {enabled = true},}";
       }
+      vim-prettier
       {
         plugin = toggleterm-nvim;
         type = "lua";
