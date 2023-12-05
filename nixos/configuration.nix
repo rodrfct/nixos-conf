@@ -17,12 +17,6 @@
       experimental-features = ["nix-command" "flakes" ];
       auto-optimise-store = true;
     };
-
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 1w";
-    };
   };
 
   
@@ -137,16 +131,4 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
