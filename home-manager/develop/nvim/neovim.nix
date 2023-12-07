@@ -70,6 +70,7 @@
       luasnip
       cmp_luasnip
       cmp-nvim-lsp
+      cmp-path
 
       {
         plugin = nvim-autopairs;
