@@ -3,12 +3,7 @@
 {
   imports = [
     ./shells.nix
-    ./develop/develop.nix
-    ./clase/default.nix
   ];
-
-  home.username = "rodrigo";
-  home.homeDirectory = "/home/rodrigo";
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [

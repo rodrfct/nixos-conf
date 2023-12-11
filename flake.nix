@@ -20,8 +20,7 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in
-  rec {
-
+  {
     nixosConfigurations = {
 
       "nixos" = nixpkgs.lib.nixosSystem {
@@ -30,15 +29,13 @@
         specialArgs = { inherit inputs outputs; };
 
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/workstation/configuration.nix
 
           home-manager.nixosModules.home-manager {
             home-manager = {
               extraSpecialArgs = { inherit inputs outputs; };
               useGlobalPkgs = true;
               useUserPackages = true;
-          
-              users.rodrigo = import ./home-manager/home.nix;
             };
           }
         ];

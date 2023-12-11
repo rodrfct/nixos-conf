@@ -5,12 +5,6 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix # Include the results of the hardware scan.
-      ./gnome.nix
-      ./docker.nix
-    ];
 
   nix = {
     settings = {
@@ -18,10 +12,6 @@
       auto-optimise-store = true;
     };
   };
-
-  
-  # Enable flatpak
-  services.flatpak.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -33,14 +23,6 @@
     neofetch
     tree
   ];
-
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.rodrigo = {
-    isNormalUser = true;
-    description = "Rodrigo";
-    extraGroups = [ "networkmanager" "wheel" ];
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -68,18 +50,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  # boot.loader.grub.useOSProber = true;
-
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
