@@ -18,6 +18,11 @@
     lf # Yet to learn
   ];
 
+  programs.lsd = {
+    enable = true;
+    enableAliases = true;
+  };
+
   home.sessionVariables = {
     EDITOR = "micro"; # Bc running vim inside vim gets trippy
   };
