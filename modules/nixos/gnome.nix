@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   # Enable the GNOME Desktop Environment.
@@ -27,7 +27,7 @@
 
   # Wanted packages not installed by default
   environment.systemPackages = with pkgs.gnome; [
-    gnome-software
+    (lib.mkIf (config.services.flatpak.enable == true) gnome-software)
     gnome-terminal
     gnome-tweaks
   ];
