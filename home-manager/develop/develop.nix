@@ -27,10 +27,21 @@
     userEmail = "rodrigoca.fct@gmail.com";
 
     extraConfig = {
-    	init = {
-    		defaultBranch = "master";
-    	};
+      init = {
+        defaultBranch = "master";
+      };
+
+      url = {
+        "https://github.com/" = {
+          insteadOf = [
+            "gh:"
+            "github:"
+          ];
+        };
+
+      };
+
     };
   };
-  
+
 }
