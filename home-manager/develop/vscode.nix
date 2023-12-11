@@ -34,6 +34,7 @@
       # Utilities
       open-vsx.shd101wyy.markdown-preview-enhanced
       open-vsx.sndst00m.vscode-native-svg-preview
+      open-vsx.yandeu.five-server
       # Color themes
       open-vsx.antfu.theme-vitesse
       open-vsx.teabyii.ayu
