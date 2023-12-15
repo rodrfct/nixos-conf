@@ -7,6 +7,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    rust-overlay.url = "github:oxalica/rust-overlay";
 
     pandoc-setup = {
       url = "github:rodrfct/pandoc-setup";
@@ -14,7 +15,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, rust-overlay, ... }@inputs:
   let
     inherit (self) outputs;
   in
@@ -36,6 +37,10 @@
               useUserPackages = true;
             };
           }
+          ({ pkgs, ... }: {
+            nixpkgs.overlays = [ rust-overlay.overlays.default ];
+            environment.systemPackages = [ pkgs.rust-bin.stable.latest.minimal ];
+          })
         ];
 
       };
