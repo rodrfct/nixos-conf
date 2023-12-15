@@ -13,9 +13,24 @@
     lf # Yet to learn
   ];
 
-  programs.lsd = {
-    enable = true;
-    enableAliases = true;
+  programs = {
+    kitty = {
+      enable = true;
+
+      font = {
+        name = "Fira Code";
+        package = pkgs.fira-code-nerdfont;
+      };
+
+      shellIntegration = {
+        enableFishIntegration = true;
+      };
+    };
+
+    lsd = {
+      enable = true;
+      enableAliases = true;
+    };
   };
 
   home.sessionVariables = {
