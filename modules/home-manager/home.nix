@@ -11,6 +11,7 @@
     gdu
     gnome.gnome-calendar
     lf # Yet to learn
+    tldr
   ];
 
   programs = {
