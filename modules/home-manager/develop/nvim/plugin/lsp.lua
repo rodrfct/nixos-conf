@@ -80,6 +80,10 @@ require('lspconfig').volar.setup {
     capabilities = capabilities,
 }
 
+require('lspconfig').rust_analyzer.setup {
+	on_attach = on_attach,
+}
+
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]

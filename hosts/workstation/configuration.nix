@@ -10,7 +10,9 @@
       inputs.home-manager.nixosModules.default
       ../../modules/nixos/configuration.nix
       ./hardware-configuration.nix # Include the results of the hardware scan.
+
       ../../modules/nixos/gnome.nix
+      ../../modules/nixos/rust.nix
       ../../modules/nixos/docker.nix
     ];
 
