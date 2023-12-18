@@ -82,6 +82,16 @@ require('lspconfig').volar.setup {
 
 require('lspconfig').rust_analyzer.setup {
 	on_attach = on_attach,
+	settings = {
+		['rust-analyzer'] = {
+			diagnostics = {
+				enable = true;
+				experimental = {
+					enable = true;
+				}
+			}
+		}
+	},
 }
 
 -- Show line diagnostics automatically in hover window
