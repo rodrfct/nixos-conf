@@ -3,6 +3,7 @@
 {
   imports = [
     ./shells.nix
+    # ./kitty.nix
   ];
 
   # Packages that should be installed to the user profile.
@@ -15,19 +16,6 @@
   ];
 
   programs = {
-    kitty = {
-      enable = true;
-
-      font = {
-        name = "Fira Code";
-        package = pkgs.fira-code-nerdfont;
-      };
-
-      shellIntegration = {
-        enableFishIntegration = true;
-      };
-    };
-
     lsd = {
       enable = true;
       enableAliases = true;
