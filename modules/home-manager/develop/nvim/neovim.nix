@@ -43,7 +43,14 @@
         plugin = neovim-ayu;
         type = "lua";
         config = ''
-        require('ayu').setup({})
+        local colors = require('ayu.colors')
+        colors.generate()
+
+        require('ayu').setup({
+          overrides = {
+            Type = { fg = colors.accent },
+          }
+        })
         -- require('ayu').colorscheme()
         '';
       }
