@@ -12,6 +12,12 @@
   	];
   };
 
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
+
   # Excluded packages
   environment.gnome.excludePackages = with pkgs; [
   	gnome-tour
