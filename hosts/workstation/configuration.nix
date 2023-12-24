@@ -3,7 +3,9 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, ... }:
-
+let 
+  user1 = "rodrigo";
+in
 {
   imports =
     [
@@ -26,15 +28,34 @@
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.rodrigo = {
+  users.users.${user1} = {
     isNormalUser = true;
     description = "Rodrigo";
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
   home-manager = {
-    users.rodrigo = import ./home/default.nix;
+    users.${user1} = import ./home/default.nix;
   };
+
+  console.colors = with config.home-manager.users.${user1}.colorScheme.colors; [
+    base00
+    base01
+    base02
+    base03
+    base04
+    base05
+    base06
+    base07
+    base08
+    base09
+    base0A
+    base0B
+    base0C
+    base0D
+    base0E
+    base0F
+  ];
 
   # Bootloader.
   boot.loader.grub.enable = true;

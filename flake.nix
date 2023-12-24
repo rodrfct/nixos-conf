@@ -9,6 +9,8 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     rust-overlay.url = "github:oxalica/rust-overlay";
 
+    nix-colors.url = "github:misterio77/nix-colors";
+
     pandoc-setup = {
       url = "github:rodrfct/pandoc-setup";
       flake = false;

@@ -4,6 +4,7 @@
   imports = [
     ./shells.nix
     # ./kitty.nix
+    ./colors/default.nix
   ];
 
   # Packages that should be installed to the user profile.
