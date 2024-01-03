@@ -208,6 +208,8 @@
     bufmap('<C-d>', '<C-d>zz')
     bufmap('<C-u>', '<C-u>zz')
 
+    ibufmap('<C-Right>', '<Esc>ea')
+
     -- This is so deep into my musle memory I can't get rid of it just yet
     bufmap('<C-s>', ':w<CR>')
     ibufmap('<C-s>', '<Esc>:w<CR>a')
