@@ -86,6 +86,15 @@
         config = "require('nvim-autopairs').setup()";
       }
       {
+        plugin = vim-visual-multi;
+        type = "lua";
+        config = ''
+        vim.g.VM_maps = {
+            ["I BS"] = "", -- disable backspace mapping to avoid conflict with nvim-autopairs
+          }
+        '';
+      }
+      {
         plugin = indent-blankline-nvim;
         type = "lua";
         config = "require('ibl').setup {scope = {enabled = true},}";
