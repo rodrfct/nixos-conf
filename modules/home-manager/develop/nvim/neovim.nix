@@ -37,7 +37,11 @@
       }
       {
         plugin = nord-nvim;
-        config = "colorscheme nord";
+        # config = "colorscheme nord";
+      }
+      {
+        plugin = catppuccin-nvim;
+        config = "colorscheme catppuccin-mocha";
       }
       {
         plugin = neovim-ayu;
