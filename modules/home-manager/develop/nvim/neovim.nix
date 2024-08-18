@@ -21,12 +21,12 @@
       poppler_utils
       # LSP
       luajitPackages.lua-lsp
-      rnix-lsp
+      #rnix-lsp unmantained
       rust-analyzer
       typescript
       nodePackages_latest.typescript-language-server
       vscode-langservers-extracted
-      nodePackages_latest.volar
+      #nodePackages_latest.volar not found
     ];
 
     plugins = with pkgs.vimPlugins; [

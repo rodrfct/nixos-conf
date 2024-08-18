@@ -8,6 +8,6 @@
     ../../../modules/home-manager/clase/default.nix
   ];
 
-  home.username = "rodrigo";
-  home.homeDirectory = "/home/rodrigo";
+  home.username = "mafiasaurio";
+  home.homeDirectory = "/home/mafiasaurio";
 }

@@ -4,7 +4,7 @@
 
 { config, pkgs, inputs, ... }:
 let 
-  user1 = "rodrigo";
+  user1 = "mafiasaurio";
 in
 {
   imports =
@@ -30,7 +30,7 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user1} = {
     isNormalUser = true;
-    description = "Rodrigo";
+    description = "Mafiasaurio";
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
@@ -56,11 +56,6 @@ in
     base0E
     base0F
   ];
-
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  # boot.loader.grub.useOSProber = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

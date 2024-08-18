@@ -8,5 +8,5 @@
     ];
   };
 
-  users.users.rodrigo.extraGroups = [ "docker" ];
+  users.users.mafiasaurio.extraGroups = [ "docker" ];
 }
