@@ -39,11 +39,28 @@
               useUserPackages = true;
             };
           }
-        ];
 
+        ];
       };
 
-    };
+      "charmander" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
 
+        specialArgs = { inherit inputs outputs; };
+
+        modules = [
+          ./hosts/charmander/configuration.nix
+
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+              extraSpecialArgs = { inherit inputs outputs; };
+              useGlobalPkgs = true;
+              useUserPackages = true;
+            };
+          }
+
+        ];
+      };
+    };
   };
 }
