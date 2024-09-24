@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 let 
   user1 = "mafiasaurio";
 in
@@ -22,10 +22,25 @@ in
   # Enable flatpak
   services.flatpak.enable = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "nvidia-x11"
+    "nvidia-settings"
+    "steam"
+    "steam-original"
   ];
+
+  environment.systemPackages = with pkgs; [
+    mangohud
+  ];
+
+  programs = {
+    steam = {
+      enable = true;
+      gamescopeSession.enable = true;
+    };
+
+    gamemode.enable = true;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user1} = {
