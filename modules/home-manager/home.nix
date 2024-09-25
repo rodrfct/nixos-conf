@@ -11,7 +11,7 @@
   home.packages = with pkgs; [
     btop
     gdu
-    gnome.gnome-calendar
+    gnome-calendar
     lf # Yet to learn
     tldr
   ];

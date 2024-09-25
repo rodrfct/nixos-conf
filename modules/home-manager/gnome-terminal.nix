@@ -9,7 +9,7 @@
       visibleName = "default";
       audibleBell = false;
       cursorBlinkMode = "on";
-      colors = with config.colorScheme.colors; {
+      colors = with config.colorScheme.palette; {
         foregroundColor = base05;
         backgroundColor = base00;
         palette = [

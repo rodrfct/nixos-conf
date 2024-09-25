@@ -12,4 +12,11 @@
   environment.systemPackages = [
     pkgs.utterly-nord-plasma
   ];
+
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    pkgs.xterm
+    elisa
+    krdp
+    kwalletmanager
+  ];
 }

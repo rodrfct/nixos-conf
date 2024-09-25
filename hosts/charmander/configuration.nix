@@ -14,8 +14,6 @@ in
       ./hardware-configuration.nix # Include the results of the hardware scan.
 
       ../../modules/nixos/kde.nix
-      ../../modules/nixos/rust.nix
-      ../../modules/nixos/docker.nix
     ];
 
 
@@ -53,7 +51,7 @@ in
     users.${user1} = import ./home/default.nix;
   };
 
-  console.colors = with config.home-manager.users.${user1}.colorScheme.colors; [
+  console.colors = with config.home-manager.users.${user1}.colorScheme.palette; [
     base00
     base01
     base02
