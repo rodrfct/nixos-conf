@@ -25,6 +25,12 @@
       fsType = "vfat";
     };
 
+  fileSystems."/Almacenamiento" = {
+    device = "/dev/disk/by-label/Almacenamiento";
+    mountPoint = "/Almacenamiento";
+    fsType = "ext4";
+  };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
