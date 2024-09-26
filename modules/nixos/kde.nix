@@ -6,7 +6,10 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
+
+    theme = "Utterly-Nord";
   };
+
   programs.xwayland.enable = true;
   
   environment.systemPackages = [

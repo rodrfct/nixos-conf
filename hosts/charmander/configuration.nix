@@ -17,6 +17,8 @@ in
     ];
 
 
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+
   # Enable flatpak
   services.flatpak.enable = true;
 
@@ -25,11 +27,14 @@ in
     "nvidia-settings"
     "steam"
     "steam-original"
+    "discord"
   ];
 
   environment.systemPackages = with pkgs; [
     mangohud
   ];
+
+  services.ratbagd.enable = true;
 
   programs = {
     steam = {

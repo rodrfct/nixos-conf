@@ -10,4 +10,12 @@
 
   home.username = "mafiasaurio";
   home.homeDirectory = "/home/mafiasaurio";
+
+  home.packages = with pkgs; [
+    heroic
+    discord
+    piper
+    lutris
+    steamtinkerlaunch
+  ];
 }
