@@ -11,6 +11,7 @@ in
     [
       inputs.home-manager.nixosModules.default
       ../../modules/nixos/configuration.nix
+      ../../modules/nixos/fhsEnv.nix
       ./hardware-configuration.nix # Include the results of the hardware scan.
 
       ../../modules/nixos/kde.nix

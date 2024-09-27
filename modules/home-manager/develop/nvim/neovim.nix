@@ -26,7 +26,7 @@
       typescript
       nodePackages_latest.typescript-language-server
       vscode-langservers-extracted
-      #nodePackages_latest.volar not found
+      nodePackages_latest.vls
     ];
 
     plugins = with pkgs.vimPlugins; [
