@@ -7,13 +7,14 @@
     enable = true;
     wayland.enable = true;
 
-    theme = "Utterly-Nord";
+    theme = "Dr460nized";
   };
 
   programs.xwayland.enable = true;
   
-  environment.systemPackages = [
-    pkgs.utterly-nord-plasma
+  environment.systemPackages = with pkgs; [
+    utterly-nord-plasma
+    dr460nized-kde-theme
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
