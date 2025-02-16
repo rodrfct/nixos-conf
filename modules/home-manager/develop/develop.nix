@@ -11,7 +11,7 @@
     brave # Test for chromium
     bun
     fira-code
-    fira-code-nerdfont
+    nerd-fonts.fira-code
     firefox-devedition
     nodePackages_latest.nodejs
     onefetch

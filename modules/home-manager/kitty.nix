@@ -7,7 +7,7 @@
 
       font = {
         name = "Fira Code";
-        package = pkgs.fira-code-nerdfont;
+        package = pkgs.nerd-fonts.fira-code;
         size = 10;
       };
 

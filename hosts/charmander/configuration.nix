@@ -27,6 +27,7 @@ in
     "nvidia-x11"
     "nvidia-settings"
     "steam"
+    "steam-unwrapped"
     "steam-original"
     "discord"
   ];

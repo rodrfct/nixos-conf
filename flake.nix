@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -17,7 +18,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, rust-overlay, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, rust-overlay, chaotic, ... }@inputs:
   let
     inherit (self) outputs;
   in
@@ -50,6 +51,7 @@
 
         modules = [
           ./hosts/charmander/configuration.nix
+          chaotic.nixosModules.default
 
           home-manager.nixosModules.home-manager {
             home-manager = {
