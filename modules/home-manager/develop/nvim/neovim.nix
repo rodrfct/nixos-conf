@@ -26,7 +26,7 @@
       typescript
       nodePackages_latest.typescript-language-server
       vscode-langservers-extracted
-      nodePackages_latest.vls
+      vue-language-server
     ];
 
     plugins = with pkgs.vimPlugins; [

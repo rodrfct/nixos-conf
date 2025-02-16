@@ -79,7 +79,7 @@ require('lspconfig').volar.setup {
     on_attach = on_attach,
     capabilities = capabilities,
 
-	cmd = { "vls", "--stdio" }
+	cmd = { "vue-language-server", "--stdio" }
 }
 
 require('lspconfig').rust_analyzer.setup {
