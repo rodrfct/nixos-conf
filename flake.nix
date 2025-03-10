@@ -44,7 +44,10 @@
 
           home-manager.nixosModules.home-manager {
             home-manager = {
-              extraSpecialArgs = { inherit inputs outputs; };
+                extraSpecialArgs = {
+                  inherit inputs outputs;
+                  user1 = "mafiasaurio";
+                };
               useGlobalPkgs = true;
               useUserPackages = true;
             };
@@ -67,7 +70,10 @@
 
           home-manager.nixosModules.home-manager {
             home-manager = {
-              extraSpecialArgs = { inherit inputs outputs; };
+                extraSpecialArgs = {
+                  inherit inputs outputs;
+                  user1 = "mafiasaurio";
+                };
               useGlobalPkgs = true;
               useUserPackages = true;
             };

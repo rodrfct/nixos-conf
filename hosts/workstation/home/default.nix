@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ user1, ... }:
 
 {
   imports = [
@@ -9,6 +9,6 @@
     ../../../modules/home-manager/clase/default.nix
   ];
 
-  home.username = "mafiasaurio";
-  home.homeDirectory = "/home/mafiasaurio";
+  home.username = user1;
+  home.homeDirectory = "/home/${user1}";
 }
