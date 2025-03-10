@@ -1,10 +1,11 @@
-{ pkgs, inputs, ... }:
+{ pkgs,... }:
 
 {
 
   imports = [
     ./vscode.nix
     ./nvim/neovim.nix
+    ../kitty.nix
   ];
 
   home.packages = with pkgs; [
