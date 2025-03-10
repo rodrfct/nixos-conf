@@ -34,7 +34,10 @@
       "nixos" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-        specialArgs = { inherit inputs outputs; };
+          specialArgs = {
+            inherit inputs outputs;
+            user1 = "mafiasaurio";
+          };
 
         modules = [
           ./hosts/workstation/configuration.nix
@@ -53,7 +56,10 @@
       "charmander" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-        specialArgs = { inherit inputs outputs; };
+          specialArgs = {
+            inherit inputs outputs;
+            user1 = "mafiasaurio";
+          };
 
         modules = [
           ./hosts/charmander/configuration.nix
