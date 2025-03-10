@@ -21,18 +21,18 @@
   # Excluded packages
   environment.gnome.excludePackages = with pkgs; [
   	gnome-tour
-  	gnome-console
-  	gnome.cheese
-  	gnome.simple-scan
-  	gnome.geary
-  	gnome.gnome-contacts
-  	gnome.gnome-music
-  	gnome.gnome-maps
-  	epiphany
+    gnome-console
+    cheese
+    simple-scan
+    geary
+    gnome-contacts
+    gnome-music
+    gnome-maps
+    epiphany
   ];
 
   # Wanted packages not installed by default
-  environment.systemPackages = with pkgs.gnome; [
+  environment.systemPackages = with pkgs; [
     (lib.mkIf (config.services.flatpak.enable == true) gnome-software)
     gnome-terminal
     gnome-tweaks
