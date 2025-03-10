@@ -21,7 +21,7 @@
       poppler_utils
       # LSP
       luajitPackages.lua-lsp
-      #rnix-lsp unmantained
+      nixd
       rust-analyzer
       typescript
       nodePackages_latest.typescript-language-server
