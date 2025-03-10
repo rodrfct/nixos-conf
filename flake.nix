@@ -9,8 +9,14 @@
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     rust-overlay.url = "github:oxalica/rust-overlay";
+    nix-alien.url = "github:thiagokokada/nix-alien";
 
     nix-colors.url = "github:misterio77/nix-colors";
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
 
     pandoc-setup = {
       url = "github:rodrfct/pandoc-setup";

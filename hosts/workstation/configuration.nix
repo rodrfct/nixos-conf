@@ -14,6 +14,7 @@ in
       ./hardware-configuration.nix # Include the results of the hardware scan.
 
       ../../modules/nixos/gnome.nix
+      ../../modules/nixos/hyprland.nix
       ../../modules/nixos/rust.nix
       ../../modules/nixos/docker.nix
     ];
