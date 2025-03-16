@@ -11,7 +11,7 @@
     rust-overlay.url = "github:oxalica/rust-overlay";
     nix-alien.url = "github:thiagokokada/nix-alien";
 
-    nix-colors.url = "github:misterio77/nix-colors";
+    stylix.url = "github:danth/stylix";
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -53,6 +53,7 @@
             };
           }
 
+          inputs.stylix.nixosModules.stylix
         ];
       };
 

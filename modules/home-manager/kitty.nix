@@ -6,14 +6,9 @@
       enable = true;
 
       font = {
-        name = "Fira Code";
-        package = pkgs.nerd-fonts.fira-code;
-        size = 10;
-      };
-
-      settings = {
-        foreground = "#${config.colorScheme.palette.base05}";
-        background = "#${config.colorScheme.palette.base00}";
+        name = "Fira Code Nerdfont";
+        # package = pkgs.nerd-fonts.fira-code;
+        # size = 10;
       };
 
       shellIntegration = {

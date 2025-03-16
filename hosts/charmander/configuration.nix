@@ -56,25 +56,6 @@
     users.${user1} = import ./home/default.nix;
   };
 
-  console.colors = with config.home-manager.users.${user1}.colorScheme.palette; [
-    base00
-    base01
-    base02
-    base03
-    base04
-    base05
-    base06
-    base07
-    base08
-    base09
-    base0A
-    base0B
-    base0C
-    base0D
-    base0E
-    base0F
-  ];
-
   networking.hostName = "charmander"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 }

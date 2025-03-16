@@ -11,8 +11,10 @@
       ../../modules/nixos/configuration.nix
       ./hardware-configuration.nix # Include the results of the hardware scan.
 
+      ../../modules/nixos/stylix.nix
+
       ../../modules/nixos/gnome.nix
-      ../../modules/nixos/hyprland.nix
+      # ../../modules/nixos/hyprland.nix
       ../../modules/nixos/rust.nix
       ../../modules/nixos/docker.nix
       ../../modules/nixos/virtualisation.nix
@@ -37,25 +39,6 @@
   home-manager = {
     users.${user1} = import ./home/default.nix;
   };
-
-  console.colors = with config.home-manager.users.${user1}.colorScheme.colors; [
-    base00
-    base01
-    base02
-    base03
-    base04
-    base05
-    base06
-    base07
-    base08
-    base09
-    base0A
-    base0B
-    base0C
-    base0D
-    base0E
-    base0F
-  ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
