@@ -13,6 +13,7 @@
     gnome-calendar
     lf # Yet to learn
     tldr
+    nh
   ];
 
   programs = {
