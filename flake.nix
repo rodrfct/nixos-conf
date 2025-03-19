@@ -80,6 +80,7 @@
             };
           }
 
+          inputs.stylix.nixosModules.stylix
         ];
       };
     };

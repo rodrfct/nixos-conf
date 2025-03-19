@@ -13,6 +13,7 @@
       ./hardware-configuration.nix # Include the results of the hardware scan.
 
       ../../modules/nixos/kde.nix
+      # ../../modules/nixos/stylix.nix
     ];
 
 
