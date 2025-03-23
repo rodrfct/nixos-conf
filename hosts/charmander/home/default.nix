@@ -10,11 +10,4 @@
   home.username = user1;
   home.homeDirectory = "/home/${user1}";
 
-  home.packages = with pkgs; [
-    heroic
-    discord
-    piper
-    lutris
-    steamtinkerlaunch
-  ];
 }
