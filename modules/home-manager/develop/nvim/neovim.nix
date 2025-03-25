@@ -76,6 +76,13 @@
         config = "require('gitsigns').setup()";
       }
       {
+        plugin = neogit;
+        type = "lua";
+        config = ''require('neogit').setup {
+          kind = "floating"
+        }'';
+      }
+      {
         plugin = nvim-cmp;
         type = "lua";
         config = builtins.readFile ./plugin/cmp.lua;
