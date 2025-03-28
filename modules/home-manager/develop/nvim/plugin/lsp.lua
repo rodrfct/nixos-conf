@@ -96,6 +96,23 @@ require('lspconfig').rust_analyzer.setup {
 	},
 }
 
+-- Java LS
+require('lspconfig').java_language_server.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    root_dir = function()
+    	return vim.loop.cwd()
+    end,
+
+    cmd = {"java-language-server"},
+}
+
+-- Kotlin LS
+require'lspconfig'.kotlin_language_server.setup {
+	on_attach = on_attach,
+    capabilities = capabilities,
+} 
+
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]

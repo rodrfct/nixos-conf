@@ -10,15 +10,10 @@
 
   home.packages = with pkgs; [
     brave # Test for chromium
-    bun
     fira-code
     nerd-fonts.fira-code
     firefox-devedition
-    nodePackages_latest.nodejs
     onefetch
-    sqlite
-    sqlitebrowser
-    yq-go
   ];
 
   # basic configuration of git

@@ -23,11 +23,9 @@
       # LSP
       luajitPackages.lua-lsp
       nixd
-      rust-analyzer
-      typescript
-      nodePackages_latest.typescript-language-server
-      vscode-langservers-extracted
-      vue-language-server
+      # Treesitter
+      vimPlugins.nvim-treesitter-parsers.java
+      vimPlugins.nvim-treesitter-parsers.kotlin
     ];
 
     plugins = with pkgs.vimPlugins; [
@@ -174,6 +172,7 @@
           tree-sitter-markdown
           tree-sitter-css
           tree-sitter-html
+          tree-sitter-xml
           tree-sitter-javascript
           tree-sitter-typescript
           tree-sitter-json

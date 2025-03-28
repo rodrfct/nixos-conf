@@ -15,7 +15,6 @@
 
       ../../modules/nixos/gnome.nix
       # ../../modules/nixos/hyprland.nix
-      ../../modules/nixos/rust.nix
       ../../modules/nixos/docker.nix
       ../../modules/nixos/virtualisation.nix
     ];

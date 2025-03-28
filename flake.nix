@@ -8,7 +8,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-    rust-overlay.url = "github:oxalica/rust-overlay";
     nix-alien.url = "github:thiagokokada/nix-alien";
 
     stylix.url = "github:danth/stylix";
@@ -24,7 +23,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, rust-overlay, chaotic, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, chaotic, ... }@inputs:
   let
     inherit (self) outputs;
   in

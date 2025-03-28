@@ -3,6 +3,7 @@
 {
   imports = [
     ./shells.nix
+    ./pandoc/default.nix
     # ./kitty.nix
   ];
 
