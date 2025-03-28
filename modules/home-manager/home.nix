@@ -24,7 +24,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "micro"; # Bc running vim inside vim gets trippy
+    EDITOR = "vim";
   };
 
   xdg.desktopEntries = {
