@@ -223,9 +223,6 @@
       vim.keymap.set('i', keys, func, { buffer = bufnr })
     end
   
-    bufmap('<leader>tn', ':tabn<CR>')
-    bufmap('<leader>tp', ':tabp<CR>')
-
     bufmap('<C-d>', '<C-d>zz')
     bufmap('<C-u>', '<C-u>zz')
 
