@@ -9,6 +9,7 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    alacritty
     btop
     gdu
     gnome-calendar
