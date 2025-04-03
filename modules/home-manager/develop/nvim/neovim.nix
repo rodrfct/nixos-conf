@@ -20,6 +20,7 @@
       chafa
       imagemagick
       poppler_utils
+      ueberzugpp
       # LSP
       luajitPackages.lua-lsp
       nixd
@@ -138,6 +139,21 @@
       vim-nix
       neodev-nvim
 
+      {
+        plugin = image-nvim;
+        type = "lua";
+        config = ''
+          require('image').setup {
+            backend = "kitty",
+            integrations = {
+              markdown = {
+                only_render_image_at_cursor = true,
+              },
+            },
+            window_overlap_clear_enabled = true,
+          }
+        '';
+      }
       popup-nvim     
       telescope-media-files-nvim
       {
