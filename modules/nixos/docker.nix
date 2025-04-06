@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ pkgs, user1, ... }:
 {
   virtualisation.docker = {
     enable = true;
@@ -8,5 +8,5 @@
     ];
   };
 
-  users.users.mafiasaurio.extraGroups = [ "docker" ];
+  users.users.${user1}.extraGroups = [ "docker" ];
 }

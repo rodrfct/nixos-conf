@@ -30,12 +30,15 @@
   {
     nixosConfigurations = {
 
-      "nixos" = nixpkgs.lib.nixosSystem {
+      "nixos" =
+        let
+          user1 = "mafiasaurio";
+        in
+      nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
           specialArgs = {
-            inherit inputs outputs;
-            user1 = "mafiasaurio";
+            inherit inputs outputs user1;
           };
 
         modules = [
@@ -44,8 +47,7 @@
           home-manager.nixosModules.home-manager {
             home-manager = {
                 extraSpecialArgs = {
-                  inherit inputs outputs;
-                  user1 = "mafiasaurio";
+                  inherit inputs outputs user1;
                 };
               useGlobalPkgs = true;
               useUserPackages = true;
@@ -56,12 +58,15 @@
         ];
       };
 
-      "charmander" = nixpkgs.lib.nixosSystem {
+      "charmander" = 
+        let
+          user1 = "mafiasaurio";
+        in
+      nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
           specialArgs = {
-            inherit inputs outputs;
-            user1 = "mafiasaurio";
+            inherit inputs outputs user1;
           };
 
         modules = [
@@ -71,8 +76,7 @@
           home-manager.nixosModules.home-manager {
             home-manager = {
                 extraSpecialArgs = {
-                  inherit inputs outputs;
-                  user1 = "mafiasaurio";
+                  inherit inputs outputs user1;
                 };
               useGlobalPkgs = true;
               useUserPackages = true;
