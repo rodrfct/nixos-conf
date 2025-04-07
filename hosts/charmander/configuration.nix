@@ -17,6 +17,7 @@
       # ../../modules/nixos/stylix.nix
     ];
 
+  gaming.enable = true;
 
   # Enable flatpak
   services.flatpak.enable = true;
