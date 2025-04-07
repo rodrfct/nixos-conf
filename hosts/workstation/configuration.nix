@@ -13,7 +13,7 @@
 
       ../../modules/nixos/stylix.nix
 
-      ../../modules/nixos/gnome.nix
+      ../../modules/nixos/de/gnome.nix
       # ../../modules/nixos/hyprland.nix
       ../../modules/nixos/docker.nix
       ../../modules/nixos/virtualisation.nix

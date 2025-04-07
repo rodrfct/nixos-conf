@@ -7,7 +7,7 @@
   imports =
     [
       (modulesPath + "/installer/scan/not-detected.nix")
-      ../../modules/nixos/nvidia.nix
+      ../../modules/nixos/hardware/nvidia.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
