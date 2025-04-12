@@ -74,12 +74,17 @@ require('lspconfig').ts_ls.setup {
     capabilities = capabilities,
 }
 
--- vue-language-server is provided by volar in nixpkgs
 require('lspconfig').volar.setup {
     on_attach = on_attach,
     capabilities = capabilities,
 
-	cmd = { "vue-language-server", "--stdio" }
+	cmd = { "vue-language-server", "--stdio" },
+	init_options = {
+		vue = {
+			-- disable hybrid mode
+			hybridMode = false,
+		},
+	},
 }
 
 require('lspconfig').rust_analyzer.setup {
