@@ -162,6 +162,11 @@
         config = ''
         require('telescope').load_extension('media_files')
         require('telescope').setup({
+          pickers = {
+            find_files = {
+              find_command = {"rg", "--files", "--no-ignore", "--hidden"}
+            },
+          },
           extensions = {
             media_files = {
               filetypes = {"png", "jpg", "jpeg", "svg", "webp", "ico", "pdf"},
@@ -174,6 +179,7 @@
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
         vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+        vim.keymap.set('n', '<leader>ft', builtin.live_grep, {})
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
         vim.keymap.set('n', '<leader>fs', builtin.lsp_workspace_symbols, {})
         
