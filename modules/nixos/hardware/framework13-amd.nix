@@ -20,6 +20,7 @@
   boot = {
     extraModulePackages = with config.boot.kernelPackages; [ framework-laptop-kmod ];
     kernelModules = [ "cros_ec" "cros_ec_lpcs" ];
+    kernelParams = [ "nvme.noacpi=1" ];
   };
 
   # TODO look into zenpower
