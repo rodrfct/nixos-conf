@@ -4,7 +4,6 @@
   imports = [
     ./shells.nix
     ./pandoc/default.nix
-    # ./kitty.nix
   ];
 
   # Packages that should be installed to the user profile.
@@ -30,10 +29,6 @@
   };
 
   xdg.desktopEntries = {
-  	# firefox-developer-edition = lib.mkOverride {
-    #   name = "Firefox Developer Edition";
-    # };
-
     btop = {
   		name = "btop";
   		noDisplay = true;
