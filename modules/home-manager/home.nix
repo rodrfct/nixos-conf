@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, user1, ... }:
 
 {
   imports = [
@@ -46,6 +46,9 @@
   		noDisplay = true;
   	};
   };
+
+  home.username = user1;
+  home.homeDirectory = "/home/${user1}";
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
