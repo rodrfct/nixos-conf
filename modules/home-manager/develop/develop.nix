@@ -27,6 +27,10 @@
         defaultBranch = "master";
       };
 
+      commit = {
+        verbose = true;
+      };
+
       url = {
         "https://github.com/" = {
           insteadOf = [
