@@ -8,6 +8,7 @@
     [
       (modulesPath + "/installer/scan/not-detected.nix")
       ../../modules/nixos/hardware/nvidia.nix
+      ../../modules/nixos/hardware/ssd.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
