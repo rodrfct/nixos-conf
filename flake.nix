@@ -115,6 +115,35 @@
           inputs.stylix.nixosModules.stylix
         ];
       };
+
+      "charmeleon" =
+        let
+          user1 = "mafiasaurio";
+        in
+      nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+          specialArgs = {
+            inherit inputs outputs user1;
+          };
+
+        modules = [
+          ./hosts/charmeleon/configuration.nix
+
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+                extraSpecialArgs = {
+                  inherit inputs outputs user1;
+                };
+              useGlobalPkgs = true;
+              useUserPackages = true;
+            };
+          }
+
+          inputs.stylix.nixosModules.stylix
+          chaotic.nixosModules.default
+        ];
+      };
     };
   };
 }
