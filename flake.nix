@@ -83,6 +83,7 @@
           }
 
           inputs.stylix.nixosModules.stylix
+          chaotic.nixosModules.default
         ];
       };
 
