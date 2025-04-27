@@ -10,7 +10,7 @@
 
   config = lib.mkIf config.gaming.enable {
 
-    boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+    boot.kernelPackages = lib.mkDefault pkgs.linuxKernel.packages.linux_zen;
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg)
       ([
@@ -46,6 +46,12 @@
       };
 
       gamemode.enable = true;
+    };
+
+    specialisation = {
+      linux-cachy.configuration = {
+        boot.kernelPackages = lib.mkForce pkgs.linuxPackages_cachyos;
+      };
     };
   };
 
