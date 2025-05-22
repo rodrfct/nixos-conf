@@ -14,6 +14,7 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.consoleMode = "2";
 
   fileSystems."/" =
     { device = "/dev/disk/by-label/nixos";
