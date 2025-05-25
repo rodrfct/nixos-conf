@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, user1, ... }:
+{ inputs, user1, pkgs, lib, ... }:
 
 {
   imports =
@@ -17,6 +17,9 @@
       ../../modules/nixos/de/hyprland.nix
       ../../modules/nixos/gaming.nix
     ];
+
+  stylix.base16Scheme = lib.mkForce "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
+
 
   services.fwupd.enable = true;
 
