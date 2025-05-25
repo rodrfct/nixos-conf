@@ -8,10 +8,10 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    brave
     alacritty
     btop
     gdu
-    gnome-calendar
     lf # Yet to learn
     tldr
     nh
