@@ -35,6 +35,7 @@
   environment.systemPackages = with pkgs; [
     (lib.mkIf (config.services.flatpak.enable == true) gnome-software)
     gnome-terminal
+    gnome-screenshot
     gnome-tweaks
   ];
   
