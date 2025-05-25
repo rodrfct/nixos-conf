@@ -3,16 +3,13 @@
 {
 
   imports = [
-    ./vscode.nix
     ./nvim/neovim.nix
     ../kitty.nix
   ];
 
   home.packages = with pkgs; [
-    brave # Test for chromium
     fira-code
     nerd-fonts.fira-code
-    firefox-devedition
     onefetch
   ];
 
