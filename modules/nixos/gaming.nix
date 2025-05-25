@@ -3,12 +3,11 @@
 {
   options = {
     gaming = {
-      enable = lib.mkEnableOption "Enable gaming stuff";
       emulators = lib.mkEnableOption "Add emulators";
     };
   };
 
-  config = lib.mkIf config.gaming.enable {
+  config = {
 
     boot.kernelPackages = lib.mkDefault pkgs.linuxKernel.packages.linux_zen;
 
