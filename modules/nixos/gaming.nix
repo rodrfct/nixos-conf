@@ -24,7 +24,6 @@
 
     environment.systemPackages = with pkgs; [
       mangohud
-      gpustat
       heroic
       discord
       piper

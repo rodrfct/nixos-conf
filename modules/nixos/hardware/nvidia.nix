@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ pkgs, ... }:
 
 {
   services.xserver.videoDrivers = ["nvidia"];
@@ -11,4 +11,8 @@
     nvidia.modesetting.enable = true;
     nvidia.open = false;
   };
+
+  environment.systemPackages = with pkgs; [
+    gpustat
+  ];
 }
