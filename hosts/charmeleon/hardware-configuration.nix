@@ -16,6 +16,8 @@
   boot.extraModulePackages = [ ];
   boot.loader.systemd-boot.enable = true;
 
+  hardware.bluetooth.enable = true;
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/0b56ac9b-8e52-40c7-a120-8929d0e2f49f";
       fsType = "ext4";
