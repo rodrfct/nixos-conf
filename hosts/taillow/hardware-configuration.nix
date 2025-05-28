@@ -9,7 +9,7 @@
       ../../modules/nixos/hardware/framework13-amd.nix
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
@@ -21,10 +21,12 @@
       fsType = "ext4";
     };
 
+  boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-uuid/cc78553f-1272-4ba7-b961-b7e2c352ec37";
+
   fileSystems."/boot" =
     { device = "/dev/disk/by-label/boot";
       fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
+      options = [ "fmask=0022" "dmask=0022" ];
     };
 
   swapDevices = [ ];
