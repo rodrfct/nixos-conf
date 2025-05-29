@@ -7,6 +7,7 @@
       ../../modules/nixos/configuration.nix
       ../../modules/nixos/gaming.nix
       ./hardware-configuration.nix # Include the results of the hardware scan.
+      ../../modules/nixos/hardware/lact.nix
 
       ../../modules/nixos/de/kde.nix
       # ../../modules/nixos/stylix.nix
