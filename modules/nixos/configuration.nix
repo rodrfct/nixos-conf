@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, user1, ... }:
 
 {
 
@@ -23,6 +23,11 @@
     neofetch
     tree
   ];
+
+
+  programs.fish.enable = true;
+  users.users.${user1}.shell = pkgs.fish;
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
