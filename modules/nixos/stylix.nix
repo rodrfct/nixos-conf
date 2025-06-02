@@ -5,8 +5,8 @@
     enable = true;
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
 
     polarity = "dark";
 
@@ -28,6 +28,12 @@
         name = "Fira Code Nerdfont";
       };
       sizes.terminal = 10;
+    };
+
+    cursor = {
+      name = "BreezeX-RosePine-Linux";
+      package = pkgs.rose-pine-cursor;
+      size = 26;
     };
   };
 }
