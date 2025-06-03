@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   imports = [
     ../../kitty.nix
@@ -31,6 +31,8 @@
           "$mod, B, exec, brave"
           "$mod, T, exec, $terminal"
           "$mod, a, exec, $menu"
+          "$mod, C, exec, rofi -modi emoji -show emoji"
+          "$mod, 0, exec, rofi -show calc -modi calc -no-show-match -no-sort"
 
           "$mod, PRINT, exec, hyprshot -m region"
           " , PRINT, exec, hyprshot -m output"
@@ -74,6 +76,43 @@
       settings = {
         border-radius = config.wayland.windowManager.hyprland.settings.decoration."rounding";
       };
+    };
+  };
+
+  programs = {
+    rofi = {
+      enable = true;
+      package = pkgs.rofi-wayland;
+      theme = let
+        inherit (config.lib.formats.rasi) mkLiteral;
+      in {
+        "*" = {
+          padding = mkLiteral "12px";
+          border-radius = mkLiteral "${config.wayland.windowManager.hyprland.settings.decoration."rounding"}px";
+        };
+
+        "window" = {
+          padding = mkLiteral "0";
+          border = mkLiteral "1px solid";
+          border-color = mkLiteral "@blue";
+        };
+
+        "listview" = {
+          lines = mkLiteral "8";
+          dynamic = true;
+          fixed-height = false;
+          scrollbar = true;
+        };
+      };
+      plugins = with pkgs; [
+        rofi-emoji
+        rofi-calc
+      ];
+      modes = [
+        "drun"
+        "emoji"
+      ];
+      cycle = true;
     };
   };
 
