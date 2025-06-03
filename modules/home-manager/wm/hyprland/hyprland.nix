@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ config, pkgs, ... }:
 {
   imports = [
     ../../kitty.nix
@@ -67,5 +67,15 @@
       # inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
     ];
   };
+
+  services = {
+    mako = {
+      enable = true;
+      settings = {
+        border-radius = config.wayland.windowManager.hyprland.settings.decoration."rounding";
+      };
+    };
+  };
+
 
 }
