@@ -38,6 +38,7 @@
     environment = {
       systemPackages = with pkgs; [
         kitty
+        nautilus
         libnotify
         hyprshot
         waybar
