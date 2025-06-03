@@ -10,7 +10,10 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     nix-alien.url = "github:thiagokokada/nix-alien";
 
-    stylix.url = "github:danth/stylix";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
