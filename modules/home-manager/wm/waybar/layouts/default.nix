@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, pkgs, ... }:
 
 {
   programs.waybar.settings = {
@@ -7,7 +7,8 @@
       modules-center = [ "clock" "hyprland/workspaces" ];
       modules-right = [
         "tray"
-        "network"
+        # "network"
+        "custom/network-manager"
         "battery"
         "backlight"
         "bluetooth"
@@ -34,6 +35,18 @@
           "default" = ["" "" ""];
         };
       };
+
+      "custom/network-manager" = {
+        "exec" = "${lib.getExe pkgs.rofi-network-manager} --status --disabled-color \"#f38ba8\" --enabled-color \"#a6e3a1\" | cat";
+        "return-type" = "raw";
+        "format" = "{}  ";
+        "interval" = 3;
+        "rotate" = 0;
+        "on-click" = "${lib.getExe pkgs.rofi-network-manager}";
+        "tooltip" = false;
+      };
+
+
 
       "custom/os-button" = {
         "format" = "";

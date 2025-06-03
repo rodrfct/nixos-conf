@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   programs.waybar = {
@@ -16,6 +16,8 @@
         "bluetooth" = {
           "tooltip-format-connected-battery" = "{device_battery_percentage}% 󰂯";
           "format-disabled" = "󰂲";
+          "tooltip-format-enumerate-connected" = "{device_alias}\t{device_address}";
+          "on-click" = "${lib.getExe pkgs.rofi-bluetooth}";
         };
 
         "cpu" = {
