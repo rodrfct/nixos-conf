@@ -3,7 +3,12 @@
 {
   programs.waybar.settings = {
     mainBar = {
-      modules-left = [ "group/group-power" "cpu" "temperature" ];
+      modules-left = [
+        # "group/group-power"
+        "custom/power-menu"
+        "cpu"
+        "temperature"
+      ];
       modules-center = [ "clock" "hyprland/workspaces" ];
       modules-right = [
         "tray"
@@ -46,6 +51,12 @@
         "tooltip" = false;
       };
 
+
+      "custom/power-menu" = {
+        "format" = "";
+        "on-click" = "rofi -show power-menu -modi power-menu:rofi-power-menu";
+        "tooltip" = false;
+      };
 
 
       "custom/os-button" = {
