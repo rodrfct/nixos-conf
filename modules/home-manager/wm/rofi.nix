@@ -38,7 +38,6 @@
       modes = [
         "drun"
         "emoji"
-        "power-menu"
       ];
       cycle = true;
     };
