@@ -1,6 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
+  config.allowedUnfreePackages = [
+    "nvidia-x11"
+    "nvidia-settings"
+  ];
+
   services.xserver.videoDrivers = ["nvidia"];
   hardware = {
     graphics = {

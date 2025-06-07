@@ -5,6 +5,9 @@
 { config, pkgs, user1, ... }:
 
 {
+  imports = [
+    ./unfree-whitelist.nix
+  ];
 
   nix = {
     settings = {

@@ -11,16 +11,12 @@
 
     boot.kernelPackages = lib.mkDefault pkgs.linuxKernel.packages.linux_zen;
 
-    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg)
-      ([
-        "steam"
-        "steam-unwrapped"
-        "steam-original"
-        "discord"
-      ] ++ lib.optionals config.hardware.nvidia.modesetting.enable [
-        "nvidia-x11"
-        "nvidia-settings"
-      ]);
+    allowedUnfreePackages = [
+      "steam"
+      "steam-unwrapped"
+      "steam-original"
+      "discord"
+    ];
 
     environment.systemPackages = with pkgs; [
       mangohud
