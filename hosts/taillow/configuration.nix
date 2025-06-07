@@ -17,6 +17,7 @@
       ../../modules/nixos/de/hyprland.nix
       ../../modules/nixos/gaming.nix
       ../../modules/nixos/distrobox.nix
+      ../../modules/nixos/ml/ollama.nix
     ];
 
   stylix.base16Scheme = lib.mkForce "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
