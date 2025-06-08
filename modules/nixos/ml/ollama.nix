@@ -24,6 +24,9 @@
         OLLAMA_API_BASE_URL = "http://127.0.0.1:11434";
         # Disable authentication
         WEBUI_AUTH = "False";
+
+        ENABLE_WEB_SEARCH = "True";
+        WEB_SEARCH_ENGINE = "duckduckgo";
       };
     };
 
