@@ -24,7 +24,6 @@
       discord
       piper
       lutris
-      steamtinkerlaunch
     ] ++ lib.optionals config.gaming.emulators [
       pcsx2
       rpcs3
@@ -37,6 +36,11 @@
       steam = {
         enable = true;
         gamescopeSession.enable = true;
+        extraCompatPackages = with pkgs; [
+          proton-ge-custom
+          steamtinkerlaunch
+        ]
+        ;
       };
 
       gamemode.enable = true;
