@@ -4,6 +4,7 @@
   imports = [
     ./laptop.nix
     ./ssd.nix
+    ./amdgpu.nix
   ];
 
   environment.systemPackages = with pkgs; [
