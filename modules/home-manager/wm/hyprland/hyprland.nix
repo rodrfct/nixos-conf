@@ -80,5 +80,9 @@
     };
   };
 
+  programs = {
+    waybar.systemd.target = "hyprland-session.target";
+  };
+
 
 }
