@@ -20,6 +20,11 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    llama-cpp = {
+      url = "github:ggml-org/llama.cpp";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     pandoc-setup = {
       url = "github:rodrfct/pandoc-setup";
       flake = false;
