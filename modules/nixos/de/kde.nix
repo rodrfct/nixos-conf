@@ -13,6 +13,7 @@
   environment.systemPackages = with pkgs; [
     vulkan-hdr-layer-kwin6
     utterly-nord-plasma
+    kdePackages.kdeconnect-kde
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [

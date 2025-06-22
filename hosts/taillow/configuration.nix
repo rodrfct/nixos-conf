@@ -13,8 +13,8 @@
 
       ../../modules/nixos/stylix.nix
 
-      ../../modules/nixos/de/gnome.nix
-      ../../modules/nixos/de/hyprland.nix
+      ../../modules/nixos/de/kde.nix
+      # ../../modules/nixos/de/hyprland.nix
       ../../modules/nixos/gaming.nix
       ../../modules/nixos/distrobox.nix
       ../../modules/nixos/ml/ollama.nix
