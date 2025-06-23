@@ -4,6 +4,7 @@
   options = {
     gaming = {
       emulators = lib.mkEnableOption "Add emulators";
+      useCachyKernel = lib.mkEnableOption "Whether to use linux-cachy or not";
     };
   };
 
@@ -46,7 +47,7 @@
       gamemode.enable = true;
     };
 
-    specialisation = {
+    specialisation = lib.mkIf config.gaming.useCachyKernel {
       linux-cachy.configuration = {
         boot.kernelPackages = lib.mkForce pkgs.linuxPackages_cachyos;
       };
