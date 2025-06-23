@@ -5,7 +5,7 @@
     ./open-webui.nix
   ];
 
-  rocm.enable = lib.mkIf (config.hardware.nvidia.modesetting == false) true;
+  # rocm.enable = lib.mkIf (config.hardware.nvidia.modesetting == false) true;
 
   services = {
 

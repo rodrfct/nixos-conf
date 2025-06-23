@@ -8,12 +8,12 @@
   config = {
     hardware.graphics = {
       enable = true;
-      extraPackages = with pkgs; [
+      extraPackages = with pkgs; [] ++ lib.optionals config.rocm.enable [
         rocmPackages.clr.icd
       ];
     };
 
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = with pkgs; [] ++ lib.optionals config.rocm.enable [
       rocmPackages.rocminfo
     ];
 
