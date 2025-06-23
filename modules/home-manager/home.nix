@@ -25,6 +25,7 @@
 
   home.sessionVariables = {
     EDITOR = "vim";
+    NIXOS_OZONE_WL = "1";
   };
 
   xdg.desktopEntries = {
