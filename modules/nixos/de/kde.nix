@@ -11,7 +11,6 @@
   programs.xwayland.enable = true;
   
   environment.systemPackages = with pkgs; [
-    vulkan-hdr-layer-kwin6
     utterly-nord-plasma
     kdePackages.kdeconnect-kde
   ];
