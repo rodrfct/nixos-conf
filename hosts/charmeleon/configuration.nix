@@ -10,8 +10,12 @@
       ../../modules/nixos/hardware/lact.nix
 
       ../../modules/nixos/de/kde.nix
-      # ../../modules/nixos/stylix.nix
+      ../../modules/nixos/stylix.nix
     ];
+
+  services.hardware.openrgb.enable = true;
+
+  gaming.useCachyKernel = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user1} = {
