@@ -13,6 +13,7 @@
   environment.systemPackages = with pkgs; [
     utterly-nord-plasma
     kdePackages.kdeconnect-kde
+    kdePackages.qtwebengine
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
