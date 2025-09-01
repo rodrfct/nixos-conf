@@ -2,10 +2,16 @@
 
 {
   imports = [
-    ./laptop.nix
-    ./ssd.nix
-    ./amdgpu.nix
+    ../laptop.nix
+    ../ssd.nix
+    ../amdgpu.nix
+    ./audio.nix
   ];
+  
+  hardware.framework.laptop13.audioEnhancement = {
+    enable = true;
+    rawDeviceName = lib.mkDefault "alsa_output.pci-0000_c1_00.6.analog-stereo";
+  };
 
   environment.systemPackages = with pkgs; [
     framework-tool
