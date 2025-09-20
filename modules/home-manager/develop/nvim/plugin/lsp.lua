@@ -69,23 +69,47 @@ require('lspconfig').cssls.setup {
 	capabilities = capabilities,
 }
 
+local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
+
+local vue_plugin = {
+	name = '@vue/typescript-plugin',
+	location = "vue_lsPkg/lib/language-tools/extensions/vscode/node_modules/@vue/language-server",
+	languages = { 'vue' },
+	configNamespace = 'typescript',
+},
+
 require('lspconfig').ts_ls.setup {
 	on_attach = on_attach,
 	capabilities = capabilities,
 }
 
-require('lspconfig').volar.setup {
-	on_attach = on_attach,
-	capabilities = capabilities,
+-- require('lspconfig').volar.setup {
+-- 	on_attach = on_attach,
+-- 	capabilities = capabilities,
+--
+-- 	cmd = { "vue-language-server", "--stdio" },
+-- 	init_options = {
+-- 		vue = {
+-- 			-- disable hybrid mode
+-- 			hybridMode = false,
+-- 		},
+-- 	},
+-- }
 
-	cmd = { "vue-language-server", "--stdio" },
-	init_options = {
-		vue = {
-			-- disable hybrid mode
-			hybridMode = false,
+vim.lsp.config('vtsls', {
+	settings = {
+		vtsls = {
+			tsserver = {
+				globalPlugins = {
+					vue_plugin,
+				},
+			},
 		},
 	},
-}
+	filetypes = tsserver_filetypes,
+})
+
+vim.lsp.enable({'vue_ls', 'vtsls'})
 
 require('lspconfig').rust_analyzer.setup {
 	on_attach = on_attach,

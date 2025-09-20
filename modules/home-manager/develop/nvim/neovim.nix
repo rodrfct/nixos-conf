@@ -33,7 +33,7 @@
       {
         plugin = nvim-lspconfig;
         type = "lua";
-        config = builtins.readFile ./plugin/lsp.lua;
+        config = builtins.replaceStrings ["vue_lsPkg"] ["${pkgs.vue-language-server}"] (builtins.readFile ./plugin/lsp.lua);
       }
       {
         plugin = nord-nvim;
