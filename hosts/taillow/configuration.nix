@@ -16,6 +16,7 @@
       ../../modules/nixos/de/kde.nix
       # ../../modules/nixos/de/hyprland.nix
       ../../modules/nixos/gaming.nix
+      ../../modules/nixos/media.nix
       ../../modules/nixos/distrobox.nix
       ../../modules/nixos/ml/ollama.nix
     ];

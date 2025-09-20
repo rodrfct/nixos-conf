@@ -20,10 +20,6 @@
     ];
 
     environment.systemPackages = with pkgs; [
-      # Media
-      video2x
-      mpv
-      # Gaming
       mangohud
       protontricks
       heroic
