@@ -50,6 +50,13 @@ require('lspconfig').nixd.setup {
 
 -- This part is mine
 
+vim.lsp.config('jsonls', {
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+vim.lsp.enable('jsonls')
+
 require('lspconfig').html.setup {
 	on_attach = on_attach,
 	capabilities = capabilities,
