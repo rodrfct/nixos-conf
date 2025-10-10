@@ -9,6 +9,8 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     brave
+    protonvpn-gui
+    iotas
     alacritty
     btop
     gdu
