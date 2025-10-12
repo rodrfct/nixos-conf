@@ -22,6 +22,7 @@
     environment.systemPackages = with pkgs; [
       mangohud
       protontricks
+      bottles
       heroic
       discord
       piper
