@@ -22,6 +22,8 @@
 
   gaming.useCachyKernel = true;
 
+  boot.loader.timeout = 10;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user1} = {
     isNormalUser = true;
