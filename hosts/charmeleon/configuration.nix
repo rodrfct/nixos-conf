@@ -8,10 +8,15 @@
       ../../modules/nixos/gaming.nix
       ./hardware-configuration.nix # Include the results of the hardware scan.
       ../../modules/nixos/hardware/lact.nix
+      ../../modules/nixos/ml/llama-cpp.nix
 
       ../../modules/nixos/de/kde.nix
       ../../modules/nixos/stylix.nix
     ];
+
+  rocm.enable = true;
+
+  services.llama-cpp.model = lib.mkForce "/llms/Qwen3-32B-Q3_K_S.gguf";
 
   services.hardware.openrgb.enable = true;
 

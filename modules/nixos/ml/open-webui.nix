@@ -11,6 +11,7 @@
       environment = {
         # Disable authentication
         WEBUI_AUTH = "False";
+        ANONYMIZED_TELEMETRY= "False";
 
         ENABLE_WEB_SEARCH = "True";
         WEB_SEARCH_ENGINE = "duckduckgo";

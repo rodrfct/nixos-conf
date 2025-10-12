@@ -15,9 +15,10 @@
     llama-cpp = {
       enable = true;
       port = 8081;
-      model = "/llms/Qwen_Qwen3-4B-GGUF_Qwen3-4B-Q4_K_M.gguf";
+      # model = "/llms/Qwen_Qwen3-4B-GGUF_Qwen3-4B-Q4_K_M.gguf";
       # model = "/llms/Unsloth-Mistral-24B-Q4-M.gguf";
-      package = inputs.llama-cpp.packages.${pkgs.system}.vulkan;
+      model = "/llms/Qwen3-32B-Q3_K_S.gguf";
+      # package = inputs.llama-cpp.packages.${pkgs.system}.vulkan;
       extraFlags = [
         "-ngl"
         "100"
@@ -28,9 +29,9 @@
         "-n"
         "-2"
       ];
-      # package = pkgs.llama-cpp.override {
-      #   vulkanSupport = true;
-      # };
+      package = pkgs.llama-cpp.override {
+        vulkanSupport = true;
+      };
     };
 
     open-webui.environment = {
