@@ -85,24 +85,6 @@ local vue_plugin = {
 	configNamespace = 'typescript',
 },
 
-require('lspconfig').ts_ls.setup {
-	on_attach = on_attach,
-	capabilities = capabilities,
-}
-
--- require('lspconfig').volar.setup {
--- 	on_attach = on_attach,
--- 	capabilities = capabilities,
---
--- 	cmd = { "vue-language-server", "--stdio" },
--- 	init_options = {
--- 		vue = {
--- 			-- disable hybrid mode
--- 			hybridMode = false,
--- 		},
--- 	},
--- }
-
 vim.lsp.config('vtsls', {
 	settings = {
 		vtsls = {
