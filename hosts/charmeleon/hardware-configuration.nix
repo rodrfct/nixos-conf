@@ -29,6 +29,12 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
+  fileSystems."/Almacenamiento" =
+    { device = "/dev/disk/by-label/Almacenamiento";
+      fsType = "ext4";
+    };
+
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
