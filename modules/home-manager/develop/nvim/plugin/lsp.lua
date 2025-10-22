@@ -78,19 +78,17 @@ require('lspconfig').cssls.setup {
 
 local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
 
-local vue_plugin = {
-	name = '@vue/typescript-plugin',
-	location = "vue_lsPkg/lib/language-tools/extensions/vscode/node_modules/@vue/language-server",
-	languages = { 'vue' },
-	configNamespace = 'typescript',
-},
-
 vim.lsp.config('vtsls', {
 	settings = {
 		vtsls = {
 			tsserver = {
 				globalPlugins = {
-					vue_plugin,
+					{
+						name = '@vue/typescript-plugin',
+						location = "vue_lsPkg/lib/language-tools/packages/language-server",
+						languages = { 'vue' },
+						configNamespace = 'typescript',
+					}
 				},
 			},
 		},
