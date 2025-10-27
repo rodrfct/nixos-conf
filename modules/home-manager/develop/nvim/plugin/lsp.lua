@@ -28,7 +28,8 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 require('neodev').setup()
-require('lspconfig').lua_ls.setup {
+
+vim.lsp.config('lua_ls', {
 	on_attach = on_attach,
 	capabilities = capabilities,
 	root_dir = function()
@@ -41,23 +42,19 @@ require('lspconfig').lua_ls.setup {
 			telemetry = { enable = false },
 		},
 	}
-}
+})
 
-require('lspconfig').nixd.setup {
+vim.lsp.config('nixd', {
 	on_attach = on_attach,
 	capabilities = capabilities,
-}
-
--- This part is mine
+})
 
 vim.lsp.config('jsonls', {
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
-vim.lsp.enable('jsonls')
-
-require('lspconfig').html.setup {
+vim.lsp.config('html', {
 	on_attach = on_attach,
 	capabilities = capabilities,
 
@@ -69,12 +66,12 @@ require('lspconfig').html.setup {
 		},
 		provideFormatter = true
 	}
-}
+})
 
-require('lspconfig').cssls.setup {
+vim.lsp.config('cssls', {
 	on_attach = on_attach,
 	capabilities = capabilities,
-}
+})
 
 local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
 
@@ -96,9 +93,7 @@ vim.lsp.config('vtsls', {
 	filetypes = tsserver_filetypes,
 })
 
-vim.lsp.enable({'vue_ls', 'vtsls'})
-
-require('lspconfig').rust_analyzer.setup {
+vim.lsp.config('rust_analyzer', {
 	on_attach = on_attach,
 	settings = {
 		['rust-analyzer'] = {
@@ -110,10 +105,9 @@ require('lspconfig').rust_analyzer.setup {
 			}
 		}
 	},
-}
+})
 
--- Java LS
-require('lspconfig').java_language_server.setup {
+vim.lsp.config('java_language_server', {
 	on_attach = on_attach,
 	capabilities = capabilities,
 	root_dir = function()
@@ -121,13 +115,14 @@ require('lspconfig').java_language_server.setup {
 	end,
 
 	cmd = {"java-language-server"},
-}
+})
 
--- Kotlin LS
-require'lspconfig'.kotlin_language_server.setup {
+vim.lsp.config('kotlin_language_server', {
 	on_attach = on_attach,
 	capabilities = capabilities,
-} 
+})
+
+vim.lsp.enable({'lua_ls', 'nixd', 'jsonls', 'cssls', 'html', 'vue_ls', 'vtsls', 'rust_analyzer', 'java_language-server', 'kotlin_language-server'})
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
