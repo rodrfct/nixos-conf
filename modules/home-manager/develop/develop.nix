@@ -16,10 +16,12 @@
   # basic configuration of git
   programs.git = {
     enable = true;
-    userName = "rodrfct";
-    userEmail = "rodrigoca.fct@gmail.com";
+    settings = {
+      user = {
+        name = "rodrfct";
+        email = "rodrigoca.fct@gmail.com";
+      };
 
-    extraConfig = {
       init = {
         defaultBranch = "master";
       };
