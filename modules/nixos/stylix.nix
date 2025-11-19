@@ -23,9 +23,13 @@
         package = pkgs.noto-fonts;
         name = "Noto";
       };
+      # monospace = {
+      #   package = pkgs.nerd-fonts.fira-code;
+      #   name = "Fira Code Nerdfont";
+      # };
       monospace = {
-        package = pkgs.nerd-fonts.fira-code;
-        name = "Fira Code Nerdfont";
+        package = pkgs.nerd-fonts.gohufont;
+        name = "Gohu";
       };
       sizes.terminal = 10;
     };
