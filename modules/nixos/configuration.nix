@@ -23,7 +23,6 @@
     git
     curl
     micro
-    neofetch
     tree
   ];
 
