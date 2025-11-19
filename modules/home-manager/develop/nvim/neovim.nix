@@ -19,7 +19,7 @@
       fd
       chafa
       imagemagick
-      poppler_utils
+      poppler-utils
       ueberzugpp
       # LSP
       luajitPackages.lua-lsp
