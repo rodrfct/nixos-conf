@@ -6,6 +6,7 @@
       inputs.home-manager.nixosModules.default
       ../../modules/nixos/configuration.nix
       ../../modules/nixos/gaming
+      ../../modules/nixos/media.nix
       ./hardware-configuration.nix # Include the results of the hardware scan.
       ../../modules/nixos/hardware/lact.nix
       ../../modules/nixos/hardware/corsair-void.nix
