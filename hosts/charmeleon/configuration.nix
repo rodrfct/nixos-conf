@@ -8,6 +8,7 @@
       ../../modules/nixos/gaming
       ./hardware-configuration.nix # Include the results of the hardware scan.
       ../../modules/nixos/hardware/lact.nix
+      ../../modules/nixos/hardware/corsair-void.nix
       # ../../modules/nixos/ml/llama-cpp.nix
 
       ../../modules/nixos/de/kde.nix
