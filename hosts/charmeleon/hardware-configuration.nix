@@ -34,6 +34,12 @@
       fsType = "ext4";
     };
 
+  fileSystems."/Lentin" =
+    { device = "/dev/disk/by-label/Lentin";
+      fsType = "ext4";
+    };
+
+
 
   swapDevices = [ ];
 
