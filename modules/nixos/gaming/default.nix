@@ -30,7 +30,6 @@
     ] ++ lib.optionals config.gaming.emulators [
       pcsx2
       rpcs3
-      retroarch-full
     ];
 
     services.ratbagd.enable = true;
