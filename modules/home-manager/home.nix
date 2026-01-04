@@ -3,7 +3,6 @@
 {
   imports = [
     ./shells.nix
-    ./pandoc/default.nix
   ];
 
   # Packages that should be installed to the user profile.
