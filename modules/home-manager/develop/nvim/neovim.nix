@@ -29,6 +29,10 @@
       vimPlugins.nvim-treesitter-parsers.kotlin
     ];
 
+    extraLuaPackages = ps: [
+      ps.magick
+    ];
+
     plugins = with pkgs.vimPlugins; [
       {
         plugin = nvim-lspconfig;
