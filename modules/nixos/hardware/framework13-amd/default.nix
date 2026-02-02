@@ -5,12 +5,18 @@
     ../laptop.nix
     ../ssd.nix
     ../amdgpu.nix
-    ./audio.nix
+    # ./audio.nix
   ];
   
-  hardware.framework.laptop13.audioEnhancement = {
-    enable = true;
-    rawDeviceName = lib.mkDefault "alsa_output.pci-0000_c1_00.6.analog-stereo";
+  # hardware.framework.laptop13.audioEnhancement = {
+  #   enable = true;
+  #   rawDeviceName = lib.mkDefault "alsa_output.pci-0000_c1_00.6.analog-stereo";
+  # };
+
+  services.pipewire.wireplumber.extraConfig.no-ucm = {
+    "monitor.alsa.properties" = {
+      "alsa.use-ucm" = false;
+    };
   };
 
   environment.systemPackages = with pkgs; [
