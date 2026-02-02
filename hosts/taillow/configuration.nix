@@ -15,7 +15,6 @@
 
       ../../modules/nixos/de/kde.nix
       # ../../modules/nixos/de/hyprland.nix
-      ../../modules/nixos/gaming
       ../../modules/nixos/media.nix
       ../../modules/nixos/distrobox.nix
       ../../modules/nixos/ml/ollama.nix
@@ -25,7 +24,6 @@
 
 
   services.fwupd.enable = true;
-
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user1} = {
