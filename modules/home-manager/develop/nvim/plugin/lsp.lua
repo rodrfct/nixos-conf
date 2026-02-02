@@ -122,7 +122,22 @@ vim.lsp.config('kotlin_language_server', {
 	capabilities = capabilities,
 })
 
-vim.lsp.enable({'lua_ls', 'nixd', 'jsonls', 'cssls', 'html', 'vue_ls', 'vtsls', 'rust_analyzer', 'java_language-server', 'kotlin_language-server'})
+-- Eslint
+local base_on_attach = vim.lsp.config.eslint.on_attach
+vim.lsp.config("eslint", {
+  on_attach = function(client, bufnr)
+    if not base_on_attach then return end
+
+    base_on_attach(client, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "LspEslintFixAll",
+    })
+  end,
+})
+
+vim.lsp.enable({'lua_ls', 'nixd', 'jsonls', 'cssls', 'html', 'vue_ls', 'vtsls', 'rust_analyzer', 'java_language-server', 'kotlin_language-server',
+'tailwindcss'})
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
