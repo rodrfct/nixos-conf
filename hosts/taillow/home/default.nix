@@ -10,6 +10,5 @@
 
   home.packages = with pkgs; [
     firefox-devedition
-    teams-for-linux
   ];
 }
