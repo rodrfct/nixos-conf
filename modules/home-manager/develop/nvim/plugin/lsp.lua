@@ -73,9 +73,22 @@ vim.lsp.config('cssls', {
 	capabilities = capabilities,
 })
 
+vim.lsp.config('tailwindcss', {
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+vim.lsp.config('emmet_language_server', {
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
 
 vim.lsp.config('vtsls', {
+	on_attach = on_attach,
+	capabilities = capabilities,
+
 	settings = {
 		vtsls = {
 			tsserver = {
@@ -137,7 +150,7 @@ vim.lsp.config("eslint", {
 })
 
 vim.lsp.enable({'lua_ls', 'nixd', 'jsonls', 'cssls', 'html', 'vue_ls', 'vtsls', 'rust_analyzer', 'java_language-server', 'kotlin_language-server',
-'tailwindcss'})
+'tailwindcss', 'emmet_language_server', 'eslint'})
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
