@@ -260,7 +260,8 @@
     '';
 
     extraConfig = ''
-    set guicursor+=a:blinkon1
+      set guicursor+=a:blinkon1
+      set autoread
     '';
   };
 }
