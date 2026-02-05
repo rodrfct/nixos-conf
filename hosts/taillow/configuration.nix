@@ -22,6 +22,10 @@
 
   stylix.base16Scheme = lib.mkForce "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
 
+  # OpenVPN support for NetworkManager
+  networking.networkmanager.plugins = [
+    pkgs.networkmanager-openvpn
+  ];
 
   services.fwupd.enable = true;
 
