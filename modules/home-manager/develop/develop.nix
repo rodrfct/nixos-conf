@@ -11,6 +11,7 @@
     fira-code
     nerd-fonts.fira-code
     onefetch
+    authenticator
   ];
 
   # basic configuration of git
