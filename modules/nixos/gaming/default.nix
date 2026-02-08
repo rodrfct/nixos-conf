@@ -26,7 +26,6 @@
       heroic
       discord
       piper
-      lutris
     ] ++ lib.optionals config.gaming.emulators [
       pcsx2
       rpcs3
