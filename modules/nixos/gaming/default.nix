@@ -38,10 +38,9 @@
         enable = true;
         gamescopeSession.enable = true;
         extraCompatPackages = with pkgs; [
-          proton-ge-custom
+          proton-ge-bin
           steamtinkerlaunch
-        ]
-        ;
+        ];
       };
 
       gamemode.enable = true;
