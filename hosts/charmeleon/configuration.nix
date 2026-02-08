@@ -22,7 +22,7 @@
 
   services.hardware.openrgb.enable = true;
 
-  gaming.useCachyKernel = true;
+  gaming.emulators = true;
 
   boot.loader.timeout = 10;
 
