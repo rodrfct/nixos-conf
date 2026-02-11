@@ -31,7 +31,7 @@
         package = pkgs.nerd-fonts.gohufont;
         name = "Gohu";
       };
-      sizes.terminal = 10;
+      sizes.terminal = 11;
     };
 
     cursor = {
