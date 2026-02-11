@@ -19,6 +19,8 @@
     };
   };
 
+  services.fwupd.enable = true;
+
   environment.systemPackages = with pkgs; [
     framework-tool
   ];
