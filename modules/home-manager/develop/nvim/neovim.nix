@@ -25,6 +25,8 @@
       luajitPackages.lua-lsp
       nixd
       # Treesitter
+      tree-sitter
+      vimPlugins.nvim-treesitter-parsers.tsx
       vimPlugins.nvim-treesitter-parsers.java
       vimPlugins.nvim-treesitter-parsers.kotlin
     ];
