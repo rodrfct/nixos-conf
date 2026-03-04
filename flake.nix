@@ -8,6 +8,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    vscode-server.url = "github:nix-community/nixos-vscode-server";
     nix-alien.url = "github:thiagokokada/nix-alien";
 
     stylix = {
@@ -74,6 +75,7 @@
 
         modules = [
           ./hosts/taillow/configuration.nix
+          inputs.vscode-server.nixosModules.default
 
           home-manager.nixosModules.home-manager {
             home-manager = {

@@ -10,6 +10,13 @@ let
     });
 in
 {
+  # Enable vscode-server-fix user daemon
+  imports = [
+    "${fetchTarball {url = "https://github.com/msteen/nixos-vscode-server/tarball/master"; sha256 = "0xjal4zcbmdjdaspfkjbpx1680q7390wfzmj7iad04kp3pc9syf8";}}/modules/vscode-server/home.nix"
+  ];
+
+  services.vscode-server.enable = true;
+
   home.packages = with pkgs; [
     nil # Nix LSP
     nixpkgs-fmt
@@ -59,6 +66,9 @@ in
         # Icon themes
         open-vsx.pkief.material-icon-theme
         # Enterprise stuff
+        (resetLicense vscode-marketplace-release.ms-vscode-remote.vscode-remote-extensionpack)
+        (resetLicense vscode-marketplace-release.ms-vscode-remote.remote-ssh)
+        (resetLicense vscode-marketplace-release.ms-vscode-remote.remote-ssh-edit)
         (resetLicense vscode-marketplace-release.github.copilot)
         (resetLicense vscode-marketplace-release.github.copilot-chat)
       ];

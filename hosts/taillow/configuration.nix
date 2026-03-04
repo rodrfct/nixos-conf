@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, user1, pkgs, lib, ... }:
+{ inputs, user1, pkgs, lib, vscode-server, ... }:
 
 {
   imports =
@@ -18,6 +18,7 @@
       ../../modules/nixos/media.nix
       ../../modules/nixos/distrobox.nix
       ../../modules/nixos/ml/ollama.nix
+      ../../modules/nixos/unfree-dumpster.nix
     ];
 
   stylix.base16Scheme = lib.mkForce "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
@@ -27,6 +28,8 @@
     pkgs.networkmanager-openvpn
   ];
 
+  services.vscode-server.enable = true;
+  programs.nix-ld.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user1} = {
