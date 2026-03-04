@@ -20,6 +20,5 @@
     pkgs.xterm
     elisa
     krdp
-    kwalletmanager
   ];
 }
