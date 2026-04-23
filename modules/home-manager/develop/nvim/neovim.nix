@@ -10,7 +10,7 @@
     vimdiffAlias = true;
 
     extraPackages = with pkgs; [
-      nodePackages_latest.prettier
+      prettier
       # Clipboard support
       xclip 
       wl-clipboard
