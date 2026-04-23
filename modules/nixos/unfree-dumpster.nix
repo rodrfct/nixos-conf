@@ -5,5 +5,6 @@
 
   allowedUnfreePackages = [
     "vscode"
+    "postman"
   ];
 }
