@@ -47,7 +47,9 @@
       }
       {
         plugin = catppuccin-nvim;
-        config = "colorscheme catppuccin-mocha";
+        # config = "colorscheme catppuccin-mocha";
+        type = "lua";
+        config = "vim.cmd.colorscheme('catppuccin-mocha')";
       }
       {
         plugin = neovim-ayu;
@@ -221,7 +223,7 @@
       }
     ];
 
-    extraLuaConfig = ''
+    initLua = ''
 
     vim.g.mapleader = ' '
     vim.g.maplocalleader = ' '
