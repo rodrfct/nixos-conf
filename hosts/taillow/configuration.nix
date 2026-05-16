@@ -17,8 +17,9 @@
       # ../../modules/nixos/de/hyprland.nix
       ../../modules/nixos/media.nix
       ../../modules/nixos/distrobox.nix
-      ../../modules/nixos/ml/ollama.nix
+      # ../../modules/nixos/ml/ollama.nix
       ../../modules/nixos/unfree-dumpster.nix
+      ./autoclick.nix
     ];
 
   stylix.base16Scheme = lib.mkForce "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
@@ -34,7 +35,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user1} = {
     isNormalUser = true;
-    description = "Mafiasaurio";
+    description = "Rodrigo";
     extraGroups = [ "networkmanager" "wheel" ];
   };
 

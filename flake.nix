@@ -36,7 +36,7 @@
 
       "taillow" =
         let
-          user1 = "mafiasaurio";
+          user1 = "rodrigo";
         in
       nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
