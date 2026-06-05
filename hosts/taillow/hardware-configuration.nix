@@ -17,14 +17,14 @@
   boot.loader.systemd-boot.consoleMode = "2";
 
   fileSystems."/" =
-    { device = "/dev/disk/by-label/nixos";
+    { device = "/dev/mapper/luks-9ec1d193-2807-4bf6-a2f6-9fcbf2156d48";
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-uuid/cc78553f-1272-4ba7-b961-b7e2c352ec37";
+  boot.initrd.luks.devices."luks-9ec1d193-2807-4bf6-a2f6-9fcbf2156d48".device = "/dev/disk/by-uuid/9ec1d193-2807-4bf6-a2f6-9fcbf2156d48";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-label/boot";
+    { device = "/dev/disk/by-uuid/64E5-5E40";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
