@@ -12,7 +12,7 @@
     nerd-fonts.fira-code
     onefetch
     authenticator
-    # postman
+    postman
   ];
 
   # basic configuration of git

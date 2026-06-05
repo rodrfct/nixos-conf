@@ -55,7 +55,7 @@ in
         # Language support
         open-vsx.jnoortheen.nix-ide
         open-vsx.vue.volar
-        vscode-marketplace-release.tailwindcssintellisenseplus.vscode-tailwindcss-plus
+        #vscode-marketplace-release.tailwindcssintellisenseplus.vscode-tailwindcss-plus
         # Utilities
         open-vsx.shd101wyy.markdown-preview-enhanced
         open-vsx.sndst00m.vscode-native-svg-preview
@@ -69,8 +69,9 @@ in
         (resetLicense vscode-marketplace-release.ms-vscode-remote.vscode-remote-extensionpack)
         (resetLicense vscode-marketplace-release.ms-vscode-remote.remote-ssh)
         (resetLicense vscode-marketplace-release.ms-vscode-remote.remote-ssh-edit)
-        (resetLicense vscode-marketplace-release.github.copilot)
-        (resetLicense vscode-marketplace-release.github.copilot-chat)
+        # (resetLicense vscode-marketplace-release.github.copilot)
+        # (resetLicense vscode-marketplace-release.github.copilot-chat)
+        (resetLicense pkgs.vscode-extensions.anthropic.claude-code)
       ];
 
       languageSnippets = {
