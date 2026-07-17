@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     brave
     proton-vpn
+    proton-authenticator
     iotas
     alacritty
     btop
