@@ -19,7 +19,6 @@
       ../../modules/nixos/distrobox.nix
       # ../../modules/nixos/ml/ollama.nix
       ../../modules/nixos/unfree-dumpster.nix
-      ./autoclick.nix
     ];
 
   stylix.base16Scheme = lib.mkForce "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
