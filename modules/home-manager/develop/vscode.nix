@@ -20,6 +20,7 @@ in
   home.packages = with pkgs; [
     nil # Nix LSP
     nixpkgs-fmt
+    claude-code
   ];
 
   stylix.targets.vscode.enable = false;
