@@ -25,7 +25,7 @@
       };
 
       init = {
-        defaultBranch = "master";
+        defaultBranch = "main";
       };
 
       commit = {
@@ -43,6 +43,19 @@
       };
 
     };
+
+    includes = [
+        {
+          condition = "gitdir:~/proyectos/";
+          contents = {
+            user = {
+              name = "Rodrigo Címbora";
+              email = "rodrigo.cimbora@enovait.es";
+            };
+          };
+        }
+    ];
+
   };
 
   home.shellAliases = {
