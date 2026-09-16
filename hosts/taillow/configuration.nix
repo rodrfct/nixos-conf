@@ -17,7 +17,7 @@
       # ../../modules/nixos/de/hyprland.nix
       ../../modules/nixos/media.nix
       ../../modules/nixos/distrobox.nix
-      # ../../modules/nixos/ml/ollama.nix
+      ../../modules/nixos/docker.nix
       ../../modules/nixos/unfree-dumpster.nix
     ];
 
