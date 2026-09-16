@@ -11,8 +11,10 @@
     proton-vpn
     proton-authenticator
     iotas
+    kdePackages.marknote
     alacritty
     btop
+    bat
     gdu
     lf # Yet to learn
     tldr
