@@ -1,6 +1,10 @@
 { pkgs, lib, config, ... }:
 
 {
+  imports = [
+    ../nix-ld.nix
+  ];
+
   options = {
     gaming = {
       emulators = lib.mkEnableOption "Add emulators";
@@ -17,6 +21,7 @@
       "steam-unwrapped"
       "steam-original"
       "discord"
+      "discord-unwrapped"
     ];
 
     environment.systemPackages = with pkgs; [
