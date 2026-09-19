@@ -21,6 +21,8 @@ in
     nil # Nix LSP
     nixpkgs-fmt
     claude-code
+    authenticator
+    postman
   ];
 
   stylix.targets.vscode.enable = false;
