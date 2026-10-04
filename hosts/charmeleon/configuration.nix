@@ -6,6 +6,8 @@
       inputs.home-manager.nixosModules.default
       ../../modules/nixos/configuration.nix
       ../../modules/nixos/gaming
+      ../../modules/nixos/creation
+
       ../../modules/nixos/media.nix
       ./hardware-configuration.nix # Include the results of the hardware scan.
       ../../modules/nixos/hardware/lact.nix

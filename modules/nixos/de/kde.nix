@@ -1,4 +1,4 @@
-{ pkgs, ...}: 
+{ pkgs, config, ...}: 
 
 {
   services = {
@@ -21,6 +21,7 @@
     utterly-nord-plasma
     kdePackages.kdeconnect-kde
     kdePackages.qtwebengine
+    (lib.mkIf (config.services.flatpak.enable == true) kdePackages.discover)
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
